@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en" style="font-size: ;">
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta
+		  name="viewport"
+		    content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, viewport-fit=cover"
+		/>
+		<title></title>
+		<style>
+			*{
+				padding: 0;
+				margin: 0;
+				box-sizing: border-box;
+				list-style: none;
+				text-decoration: none;
+			}
+			.bigbox{
+				width: 1550px;
+				height: 4500px;
+				background: url(img/gddf.jpg) no-repeat;
+				background-size: 1550px 4500px;
+				margin: auto;
+			}
+			.box{
+				width: 1220px;
+				height: 4500px;
+				background: url(img/gddf.jpg) no-repeat;
+				background-size: 1220px 4500px;
+				margin: auto;
+			}
+			.top{
+				width: 1220px;
+				height: 150px;
+			}
+			.top p{
+				font-size: 50px;
+				font-weight: bold;
+				padding: 20px 0 0 20px;
+				color: saddlebrown;
+			}
+			.top span{
+				display: block;
+				font-size: 30px;
+				font-weight: bold;
+				padding: 3px 0 0 100px;
+				margin-bottom: 30px;
+				color: saddlebrown;
+			}
+			.head{
+				width: 1220px;
+				height: 50px;
+				border: 1px solid saddlebrown;
+			}
+			.head ul{
+				display: inline-block;
+				width: 900px;
+				float: left;
+				
+			}
+			.head ul>li{
+				display: inline-block;
+			}
+			.head a{
+				display: inline-block;
+				color: black;
+				width: 120px;
+				height: 50px;
+				text-align: center;
+				padding: 12px 0;
+				font-weight: bold;
+			}
+			.head input{
+				width: 220px;
+				height: 38px;
+				margin: 5px;
+				background-color: transparent;
+				padding-left: 10px;
+			}
+			.head  button{
+				width: 50px;
+				height: 38px;
+			}
+			.bodybox1{
+				width: 1220px;
+				height: 500px;
+				position: relative;
+			}
+			.bodybox1 p{
+				width: 1220px;
+				height: 50px;
+				margin-bottom: 10px;
+				font-size: 30px;
+				font-weight: bold;
+				padding-left: 60px;
+				padding-top: 10px;
+			}
+			.bodybox1 span{
+				display: inline-block;
+				width: 840px;
+				height: 400px;
+				font-size: 20px;
+				padding: 20px;
+				background-color: antiquewhite;
+				background-image: url(img/gddf.jpg);
+				box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+			}
+			.bodybox1 img{
+				position: absolute;
+				right: 10px;
+				padding: 10px;
+				border: 1px solid gainsboro;
+			}
+			.bodybox2{
+				width: 1220px;
+				height: 1300px;
+			}
+			.bodyleft{
+				float: left;
+				width: 300px;
+				height: 1200px;
+				background-color: transparent;
+			}
+			.bodyright{
+				float: right;
+				background-color: transparent;
+				width: 840px;
+				height: 1200px;
+			}
+			.leftbox{
+				width: 300px;
+				height: 400px;
+				background-color: transparent;
+			}
+			.bodybox2 p{
+				width: 1220px;
+				height: 50px;
+				margin-bottom: 20px;
+				font-size: 30px;
+				font-weight: bold;
+				padding-left: 60px;
+				padding-top: 10px;
+			}
+			.leftbox p{
+				width: 300px;
+				height: 50px;
+				text-align: center;
+				padding: 0;
+				margin: 0;
+				background-color: antiquewhite;
+				color: brown;
+			}
+			.rightbox{
+				width: 840px;
+				height: 300px;
+				margin-bottom: 100px;
+				background: url(img/gddf.jpg) no-repeat;
+				background-size: 840px 300px;
+				box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+				padding: 30px 20px;
+			}
+			.rightbox span{
+				font-size: 22px;
+			}
+			.bodybox3{
+				width: 1220px;
+				height: 1500px;
+			}
+			.bodybox3 p{
+				width: 1220px;
+				height: 50px;
+				margin-bottom: 20px;
+				font-size: 30px;
+				font-weight: bold;
+				padding-left: 60px;
+				padding-top: 10px;
+			}
+			.box3{
+				width: 500px;
+				height: 600px;
+				background: url(img/gddf.jpg) no-repeat;
+				background-size: 500px 600px;
+				float: left;
+				box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+				margin-bottom: 50px;
+			}
+			.bodybox4{
+				width: 1220px;
+				height: 500px;
+			}
+			.bodybox4 p{
+				width: 1220px;
+				height: 50px;
+				margin-bottom: 20px;
+				font-size: 30px;
+				font-weight: bold;
+				padding-left: 60px;
+				padding-top: 10px;
+			}
+			.ly p{
+				width: 400px;
+				height: 50px;
+				margin: 0;
+				padding: 0;
+			}
+			.ly{
+				width: 500px;
+				height: 300px;
+				background-color: aquamarine;
+				margin: auto;
+				padding: 20px;
+				position: relative;
+				background: url(img/gddf.jpg) no-repeat;
+				background-size: 500px 300px;
+				box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+			}
+			.ly textarea{
+				width: 450px;
+				height: 100px;
+				padding: 10px 0 0 10px;
+				outline: none;
+				margin-bottom: 20px;
+			}
+			.ly button{
+				width: 200px;
+				height: 30px;
+				
+			}
+			.ly span{
+				position: absolute;
+				right: 10px;
+			}
+			.ly input{
+				position: absolute;
+				right: 80px;
+				width: 23px;
+				height: 23px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="bigbox">
+			<div class="box">
+				<div class="top">
+					<p>— 中 华 古 诗 词 —</p>
+					<span>zhong hua gu shi ci</span>
+				</div>
+				<div class="head">
+					<ul>
+						<li><a href="#">网页首页</a></li>
+						<li><a href="#">诗人介绍</a></li>
+						<li><a href="#">诗词欣赏</a></li>
+						<li><a href="#">阅读感悟</a></li>
+					</ul>
+					
+					<input type="text" placeholder="猜你想搜 : 李白"/>
+					<button>搜索</button>
+				</div>
+				<img src="img/微信图片_20240605234112.jpg" alt="" / width="1220px" height="500px">
+				<div class="bodybox1">
+					
+					<p>古诗简介</p>
+					<span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+						中国传统文化博大精深，源远流长，其中诗词作为其重要组成部分，承载了中华民族的历史、哲学、道德和审美观念，展现了中国人民的情感世界和精神追求。诗词是汉语文化的瑰宝，也是民族文化的精髓。自古以来，诗词就在民间广为流传，成为人们生活的一部分。直到今天，诗词仍然深受广大人民群众的喜爱，并对我们的语言、情感、美学产生深远的影响。
+						诗词起源于先秦时期，发展于唐宋，传承至今。
+						它不仅具有音乐、舞蹈、绘画等多种艺术形式，还表现出强烈的民族风格和时代特征。诗词以凝练的语言、绵密的章法、充沛的情感和丰富的意象，高度集中地表现了社会生活和人类精神世界。
+						<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;中国古典诗词有三个主要层次的美：音声美、意境美和品格美。音声美指的是诗词的韵律和节奏，意境美是指诗词中所表达的思想和情感，品格美则是指诗词中所体现的道德观念和人文精神。这三个层次的美，构成了中国古典诗词独特的艺术魅力。
+					 </span>
+					<img src="img/微信图片_20240605234116.jpg" alt="" / width="320" height="400px">
+				</div>
+				<div class="bodybox2">
+					<p>诗人介绍</p>
+					<div class="bodyleft">
+						<div class="leftbox">
+							<img src="img/微信图片_20240605233048.jpg" alt="" / width="300px" height="300px">
+							<p>李白</p>
+						</div>
+						<div class="leftbox">
+							<img src="img/微信图片_20240605233113.jpg" alt="" / width="300px" height="300px">
+							<p>杜甫</p>
+						</div>
+						<div class="leftbox">
+							<img src="img/微信图片_20240605233058.jpg" alt="" / width="300px" height="300px">
+							<p>苏轼</p>
+						</div>
+					</div>
+					<div class="bodyright">
+						<div class="rightbox">
+							<span>
+								李白,字太白，号青莲居士。出生于碎叶，5 岁时举家迁至绵州昌隆县(今四川江油)。唐代伟大的浪漫主义诗人他的诗歌善用比喻夸张的手法，想象奇特丰富，因之被人称为“诗仙”。
+								李白自小很佩服先秦时候的游使，因此也喜欢练习剑术。有一段时间李白对学习产生懈息的心理，于是离开学堂回家。在回家的路上，他看见一位老太太正在磨
+								一-根铁柞，李白很奇怪，就问老太太究竞要干什么，老太太看了李白一眼,回答说要磨成一根针。李白听了深受感动，下决心回去完成自己的学业。自此李白博览群书，接受了儒道两家的思想。
+							</span>
+						</div>
+						<div class="rightbox">
+							<span>
+								杜甫，宇于美，自号少陵野老，汉族，环县（今河南
+								巩义）人。杜甫曾祖父（杜审言父亲）起由裹阳（今属湖北）迁居巩县。或唐时期伟大的现实主义诗人。他忧國此民，人格高尚，他的约
+								1500首诗被保留了下來，诗艺精湛，在中国古典诗歌中的影响非常深
+								远，备受推崇，后世诗人有“最尚社工部之系心国民”之语（《我数堂集》）。社南被世人尊为“诗圣”
+								，共诗被称为“诗史”
+								，杜南与李白
+								合称“李壮”，
+								• 为了与为两位诗人李商隐与杜收即“小李杜”区到，
+								杜
+								甫与李白又合称“大李杜”。
+							</span>
+						</div>
+						<div class="rightbox">
+							<span>杜南（712-770），宇于美，自号少陵野老，汉族，环县（今河南
+巩义）人。杜甫曾祖父（杜审言父亲）起由裹阳（今属湖北）迁居巩县。或唐时期伟大的现实主义诗人。他忧國此民，人格高尚，他的约
+1500首诗被保留了下來，诗艺精湛，在中国古典诗歌中的影响非常深
+远，备受推崇，后世诗人有“最尚社工部之系心国民”之语（《我数堂集》）。社南被世人尊为“诗圣”
+，共诗被称为“诗史”
+，杜南与李白
+合称“李壮”，
+• 为了与为两位诗人李商隐与杜收即“小李杜”区到，
+杜
+甫与李白又合称“大李杜”</span>
+						</div>
+					</div>
+				</div>
+				<div class="bodybox3">
+					<p>诗词欣赏</p>
+					<div>
+						<audio controls="controls" loop="loop" preload="auto">
+							<source src="img/黄汐瑶 - 琵琶行 (V0).mp3">
+						</audio>
+					</div>
+					
+					<div class="box3" style="margin-right: 220px;">
+						<img src="img/微信图片_20240605234119.jpg" alt="" / width="500px" height="600px">
+					</div>
+					<div class="box3">
+						<img src="img/微信图片_20240605234127.jpg" alt="" / width="500px" height="600px">
+					</div>
+					<div class="box3" style="margin-right: 220px;">
+						<img src="img/微信图片_20240605234205.jpg" alt="" / width="500px" height="600px">
+					</div>
+					<div class="box3">
+						<img src="img/微信图片_20240605234246.jpg" alt="" / width="500px" height="600px">
+					</div>
+				</div>
+				<div class="bodybox4">
+					<p>阅读感悟</p>
+					<div class="ly">
+						<p>留言</p>
+						<textarea name="留言" id="dd" cols="64" rows="10" placeholder="请留下你深刻的阅读感受:"></textarea>
+						<button>提交</button>
+						<input type="checkbox" /><span>匿名提交</span>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
