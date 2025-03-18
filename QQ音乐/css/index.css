@@ -1,0 +1,958 @@
+<style>
+			*{
+				padding: 0;
+				margin: 0;
+				box-sizing: border-box;
+				text-decoration: none;
+				list-style: none;
+			}
+			.clearfix::after{
+				content: "";
+				clear: both;
+				display: table;
+			}
+			.clearfix{
+				float: left;
+			}
+			.bigbox{
+				position: relative;
+				width: 2780px;
+				height: 4850px;
+				margin: auto;
+			}
+			.box{
+				
+				background-color: #31C27C;
+				height: 4800px;
+				margin: auto;
+			}
+			
+			.top{
+				width: 100%;
+				height: 100px;
+				background-color: white;
+				margin: auto;
+				
+			}
+			.topleft{
+				display: inline-block;
+				width: 300px;
+				height: 100%;
+				background-color: white;
+				text-align: center;
+				padding-top: 30px;
+				padding-left: 80px;
+				
+			margin-left: 690px;
+			}
+			.topleft img{
+				width: 170px;
+				
+				
+			}
+			
+			.topright{
+				width: 1550px;
+				height: 100%;
+				background-color: white;
+				float: right;
+				margin-right: 240px;
+				position: relative;
+				
+			}
+			.rcen{
+				display: inline-block;
+				width: 940px;
+				height: 100px;
+				
+			}
+			.rcen a{
+				color: black;
+				font-size: 18px;
+				display: inline-block;
+				width: 110px;
+				height: 100%;
+				overflow: hidden;
+				padding-top: 40px;
+				
+				text-align: center;
+				
+			}
+			.rcen a:hover{
+				color: #31C27C;
+			}
+			.rcen a:active{
+				background-color: #31C27C;
+				color: #f9f9f9;
+			}
+			.rcen span{
+				position: relative;
+				padding-right: 2px;
+				display: inline-block;
+				border: 1px solid gainsboro;
+				border-radius: 3px;
+				width: 210px;
+				height: 40px;
+				
+				
+			}
+			
+			.rcen input{
+				border: none;
+				width: 180px;
+				height: 38px;
+				font-size: 14px;
+				padding: 0px 0 0 8px;
+				
+			}
+			.rcen button{
+				position: absolute;
+				right: 0;
+				border: none;
+				background-color: white;
+				width: 30px;
+				height: 38px;
+				padding-top: 8px;
+				
+				padding-top: 10px;
+			}
+			.rcen i{
+				display: inline-block;
+				padding-top: 8px;
+				overflow: hidden;
+				width: 30px;
+				height: 40px;
+				font-size: 25px;
+				color: #767676;
+				position: absolute;
+				right: 3px;
+				bottom: 0;
+			}
+			.rcen i:hover{
+				color: #31C27C;
+			}
+			.ankk{
+				display: inline-block;
+				width: 210px;
+				height: 100px;
+				overflow: hidden;
+				padding-top: 30px;
+			}
+			.ankk input{
+				outline: #e1e1e1;
+			}
+			.rkk1{
+				width: 130px;
+				height: 65px;
+				border: none;
+				
+				display: inline-block;
+			
+				
+			}
+			.rkk2{
+				width: 80px;
+				height: 65px;
+				border: none;
+				position: relative;
+				display: inline-block;
+			
+				
+			}
+			.rxkk1{
+				color: white;
+				background-color: #31C27C;
+				width: 130px;
+				height: 40px;
+				text-align: center;
+				
+				margin-right: 8px;
+				padding: 0;
+				font-size: 13px;
+				border-width: 10px;
+				border-color: white;
+				padding: 10px 10px;
+				float: left;
+				position: absolute;
+			}
+			
+			.annu1{
+				display: inline-block;
+				background-color: #31C27C;
+				width: 0;
+				height: 0;
+				border-width: 5px;
+				border-style: solid;
+				border-color: #f9f9f9 transparent transparent transparent;
+				padding: 0;
+				margin: 6px 0 0 0;
+				float: right;
+				position: relative;
+			}
+			.rxkk1:hover .annu1{
+				border-color: transparent transparent #f9f9f9 transparent;
+			}
+			.annu1:hover .text1{
+				display: none;
+			}
+			.rxkk1 a{
+				display: block;
+				width: 130px;
+				height: 40px;
+				color: #000;
+				font-size: 13px;
+				position: absolute;
+				left: 0;
+				top: 40px;
+				border: 1px solid #999999;
+				z-index: 1;
+				padding-top: 10px;
+				background-color: white;
+				
+			}
+			.rxkk1 a:hover{
+				background-color: #31C27C;
+				color: white;
+			}
+			.text1{
+				display: none;
+			}
+			.rxkk1:hover .text1{
+				display: block;
+			}
+			.rxkk2{
+				border: #afafaf 1px solid;
+				position: relative;
+				right: 0;
+				text-align: center;
+				display: inline-block;
+				float: left;
+				width: 80px;
+				height: 40px;
+				padding: 0;
+				font-size: 13px;
+				padding-top: 10px;
+				color: #000;
+			}
+			.rxkk2:hover{
+				background-color: #31C27C;
+				color: white;
+				border-color: white;
+			}
+			.rxkk2:hover .annu2{
+				background-color: #31C27C;
+				border-color: transparent transparent #f9f9f9 transparent;
+			}
+			.rxkk2 a:hover{
+				background-color: #31C27C;
+				color: white;
+			}
+			.text2{
+				display: none;
+			}
+			.rxkk2:hover .text2{
+				display: block;
+				
+			}
+			.rxkk2 a{
+				display: block;
+				border: 1px solid #afafaf;
+				width: 79.8px;
+				height: 40px;
+				position: absolute;
+				top: 38px;
+				right: -0.9px;
+				color: #000;
+				padding-top: 10px;
+				font-size: 13px;
+				background-color: white;
+			}
+			.annu2{
+				display: inline-block;
+				background-color: #f9f9f9;
+				width: 0;
+				height: 0;
+				border-width: 5px;
+				border-style: solid;
+				border-color: #000 transparent transparent transparent;
+				padding: 0;
+				margin: 6px 8px 0 0;
+				float: right;
+			}
+			.annu2:hover{
+				border-color: transparent transparent #000 transparent;
+			}
+			.head{
+				width: 100%;
+				height: 50px;
+				background-color: white;
+				text-align: center;
+			}
+			.head a{
+				color: black;
+				display: inline-block;
+				width: 80px;
+				height: 100%;
+				padding-top: 15px;
+			}
+			
+			.head a:hover{
+				color: #31C27C;
+			}
+			body{
+				width: 2000px;
+				margin: auto;
+			}
+			.body{
+				position: relative;
+				width: 2000px;
+				height: 3600px;
+				background-color: #f9f9f9;
+				margin: auto;
+				
+			}
+			.body p{
+				display: block;
+				width: 100%;
+				height: 100px;
+				background-color: #f9f9f9;
+				font-size: 30px;
+				text-align: center;
+				padding-top: 30px;
+			}
+			.tpkk p{
+				text-align: left;
+			}
+			.tt{
+				width: 1230px;
+				height: 60px;
+				background-color: #f9f9f9;
+				text-align: center;
+				padding-top: 10px;
+				margin: auto;
+				
+			}
+			.icon-bofang{
+				display: inline-block;
+				margin-right: 6px;
+				font-size: 25px;
+				width: 13px;
+				height: 15px;
+				margin: 0;
+				color: #767676;
+			}
+			span a{
+				margin: 0;
+			}
+			.tt i{
+				width: 25px;
+				height: 35px;
+				padding: 5px 0;
+				overflow: hidden;
+			}
+			.tt div{
+				float: left;
+				border: 1px solid gray;
+				
+				display: inline-block;
+				width: 130px;
+				height: 35px;
+				
+			}
+			.tt a{
+				color: black;
+				margin: 0 10px;
+				
+			}
+			.tt a:hover{
+				color: #31C27C;
+			}
+			.body1box{
+				width: 2000px;
+				margin: auto;
+				position: relative;
+				right: 0px;
+			}
+			.body1box:hover .jt1left{
+				display: block;
+				
+			}
+			.body1box:hover .jt1right{
+				display: block;
+			}
+			.body1box .jt1left{
+				display: none;
+			}
+			.body1box .jt1right{
+				display: none;
+			}
+			.body1{
+				
+				width: 1230px;
+				height: 300px;
+				
+				margin: auto;
+			}
+			.ppleft{
+				position: absolute;
+				left: 0;
+				
+			}
+			.ppright{
+				position: absolute;
+				right: 0;
+			}
+			.tpkk{
+				float: left;
+				width: 220px;
+				height: 300px;
+				margin: auto;
+				
+			
+			}
+			
+			.tpkk p:hover{
+				color: #31C27C;
+			}
+			.tpkk img{
+				width: 220px;
+				height: 220px;
+				
+			}
+			.tpkk p{
+				font-size: 14px;
+				width: 100%;
+				height: 25px;
+				margin: 0;
+				padding: 0;
+			}
+			
+			.body2{
+				width: 100%;
+				height: 100px;
+				background-color: palegoldenrod;
+				overflow: hidden;
+			}
+			
+			.hangbox{
+				width: 2000px;
+				margin: auto;
+				position: relative;
+				
+			}
+			.hangbox .jt1left{
+				display: none;
+			}
+			.hangbox:hover .jt1left{
+				display: block;
+			}
+			.hangbox .jt1right{
+				display: none;
+			}
+			.hangbox:hover .jt1right{
+				display: block;
+			}
+			.hang{
+				width: 1230px;
+				height: 380px;
+				background-color: #f9f9f9;
+				
+			}
+			.tpxkk{
+				height: 120px;
+				width: 410px;
+				background-color: #f9f9f9;
+				float: left;
+				margin-bottom: 10px;
+				border-bottom: 1px solid #e1e1e1;
+				position: relative;
+				
+			}
+			.hanggm{
+				color: #000;
+			}
+			.tpxkkmz{
+				color: #999999;
+			}
+			.tpxkk a:hover{
+				color: #31C27C;
+			}
+			.tpxkk img{
+				width: 100px;
+				height: 100px;
+				float: left;
+			}
+			.tpxkk a{
+				
+				display: inline-block;
+				width: 170px;
+				font-size: 12px;
+				margin-left: 15px;
+			}
+			.sj{
+				width: 100px;
+				height: 100px;
+				position: absolute;
+				right: 0;
+				top: 0;
+				padding-left: 50px;
+				padding-top: 35px;
+				
+			}
+			.sj a{
+				width: 100px;
+				margin: 0;
+				color: #999999;
+			}
+			.body3box{
+				width: 2000px;
+				margin: auto;
+				position: relative;
+				
+			}
+			.body3box .jt1left{
+				display: none;
+			}
+			.body3box .jt1right{
+				display: none;
+			}
+			.body3box:hover .jt1left{
+				display: block;
+			}
+			.body3box:hover .jt1right{
+				display: block;
+			}
+			.body3
+			{
+				width: 1230px;
+				height: 400px;
+				background-color: #f9f9f9;
+				
+				margin: auto;
+				
+			}
+			
+			.lgkk{
+				float: left;
+				width: 602px;
+				height: 300px;
+				background-color: #f9f9f9;
+				margin-right: 25px;
+				
+			}
+			.lgkk img{
+				width: 100%;
+			}
+			.body4{
+				width: 1230px;
+				height: 900px;
+				margin: auto;
+			}
+			.body4box{
+				width: 2000px;
+				height: 900px;
+				margin: auto;
+				position: relative;
+				
+			}
+			.body4box .jt1left{
+				display: none;
+			}
+			.body4box .jt1right{
+				display: none;
+			}
+			.body4box:hover .jt1left{
+				display: block;
+			}
+			.body4box:hover .jt1right{
+				display: block;
+			}
+			.tt span:hover{
+				color: #31C27C;
+			}
+			.body5box{
+				width: 2000px;
+				margin: auto;
+				position: relative;
+				
+			}
+			.body5
+			{
+				width: 1200px;
+				height: 580px;
+				margin: auto;
+				overflow: hidden;
+				background-color: #f9f9f9;
+				
+			}
+			.body5 .lubei{
+				width: 224px;
+				height: 500px;
+				background-color: #31C27C;
+				float: left;
+			}
+			.body5 a{
+				display: block;
+				text-align: center;
+				color: white;
+			}
+			.body5 h3{
+				display: block;
+				text-align: center;
+				color: white;
+				margin-top: 70px;
+				font-size: 20px;
+			}
+			
+			i{
+				
+				display: block;
+				text-align: center;
+				color: white;
+				width: 49px;
+				height: 49px;
+				margin: auto;
+			}
+			.body5 li a{
+				text-align: left;
+				padding-left: 55px;
+				font-size: 14px;
+			}
+			.body5 li{
+				margin-bottom: 15px;
+			}
+			.body6{
+				
+				width: 1230px;
+				height: 300px;
+				margin: auto;
+			}
+			.body6box{
+				width: 2000px;
+				margin: auto;
+				position: relative;
+				margin-bottom: 20px;
+			}
+			
+			.body6box .jt1left{
+				display: none;
+			}
+			.body6box .jt1right{
+				display: none;
+			}
+			.body6box:hover .jt1left{
+				display: block;
+			}
+			.body6box:hover .jt1right{
+				display: block;
+			}
+			.dw{
+				width: 100PX;
+				height: 200px;
+				z-index: 1;
+				padding: 20px 0;
+				position: fixed;
+				right: 0;
+				
+			}
+			.dw a{
+				color: black;
+				display: block;
+				text-align: center;
+				border: 1px solid #999999;
+				width: 34px;
+				height: 30px;
+				margin-bottom: 6px;
+				font-size: 12px;
+				padding: 5px 0;
+			}
+			.xddkk
+			{
+				width: 100%;
+				height: 20px;
+				border-width: 30px;
+				border-color: black;
+				background-color: #f9f9f9;
+				overflow: hidden;
+				
+			}
+			.xdd{
+				width: 9px;
+				height: 9px;
+				background-color: #e1e1e1;
+				border-radius: 50%;
+				float: left;
+				margin-right: 20px;
+				opacity: 0.8;
+			}
+			.xdd:hover{
+				background-color: #afafaf;
+			}
+			.xddxkk{
+				width: 145px;
+				height: 20px;
+				margin: auto;
+				
+			}
+			.foot{
+				position: absolute;
+				left: 390px;
+				padding-top: 50px;
+				
+				width: 2000px;
+				height: 750px;
+				background-color: #333333;
+				margin: auto;
+			}
+			.foottop{
+				width: 1230px;
+				height: 570px;
+				margin: auto;
+				background-color: #333333;
+			}
+			.footbuttom{
+				width: 1200px;
+				height: 130px;
+				margin: auto;
+			
+				padding: 20px 0;
+			}
+			.footbox{
+				float: left;
+				margin: 10px;
+				width: 400px;
+				height: 250px;
+				background-color: #333333;
+			}
+			.h1{
+				width: 1200px;
+				height: 28px;
+				text-align: center;
+				font-size: 12px;
+			}
+			.h1 span{
+				color: #999999;
+				margin-left: 5px;
+				
+			}
+			.h1 a{
+				color: #999999;
+			}
+			.h2{
+				width: 1200px;
+				height: 28px;
+				text-align: center;
+				font-size: 12px;
+			}
+			.h2 a{
+				color: #999999;
+			}
+			.h2 span{
+				color: #999999;
+			}
+			.h3 span{
+				color: #999999;
+				font-size: 12px;
+				margin-left: 5px;
+			}
+			.h3{
+				width: 1200px;
+				height: 20px;
+				text-align: center;
+				font-size: 12px;
+			}
+			.h3 a{
+				color: #999999;
+			}
+			.h4 a{
+				display: block;
+				background-color: #767676;
+				height: 30px;
+				width: 280px;
+				color: #999999;
+				padding-top: 3px;
+				margin: auto;
+				
+			}
+			.footbox p{
+				font-size: 15px;
+				width: 100%;
+				height: 50px;
+				text-align: left;
+				color: #999999;
+			}
+			.footbox a{
+				display: inline-block;
+				width: 120px;
+				color: #999999;
+				font-size: 14px;
+				margin-bottom: 12px;
+			}
+			.footbox i{
+				width: 80px;
+				height: 100px;
+				color: #999999;
+				margin: 0 20px 0 0;
+				float: left;
+				font-size: 40px;
+			}
+			
+			hr{
+				
+				height: 1px;
+				background-color: #e1e1e1;
+				border: none;
+			}
+			.jt1left{
+				float: left;
+				
+				width: 80px;
+				height: 100px;
+				background-color: #e1e1e1;
+				
+			}
+			.jt1left i{
+				width: 100%;
+				height: 100%;
+				padding-top: 30px;
+				font-size: 40px;
+				color: #999999;
+			}
+			.jt1right{
+				float: right;
+				width: 80px;
+				height: 100px;
+				background-color: #e1e1e1;
+			}
+			.jt1right i{
+				width: 100%;
+				height: 100%;
+				padding-top: 30px;
+				font-size: 40px;
+				color: #999999;
+			}
+			.jt1left:hover{
+				background-color: #afafaf;
+			}
+			.jt1right:hover{
+				background-color: #afafaf;
+				
+			}
+			.tpkk i{
+				position: relative;
+				margin: 0;
+				width: 150px;
+				height: 50px;
+				padding-bottom: 20px;
+				font-size: 23px;
+				text-align: left;
+			}
+			.icon-shipinbofang{
+				color: #999999;
+			}
+			.tpkk span{
+				position: absolute;
+				top: 2px;
+				left: 30px;
+				font-size: 14px;
+			}
+			.imgbb{
+				width: 230px;
+				height: 220px;
+				display: inline-block;
+				background-color: transparent;
+				position: absolute;
+				top: 0px;
+				left: 380px;
+				padding: 70px 70px;
+			}
+			
+			.imgyy{
+				width: 80px;
+				height: 80px;
+				display: inline-block;
+				background-color: #f9f9f9;
+				border-radius: 50px;
+				visibility: hidden;
+			}
+			@keyframes fd2{
+				from{
+					transform: scale(0);
+				}
+				to{
+					width: 80px;
+					height: 80px;
+				}
+			}
+			.icon-triangle-play{
+				font-size: 35px;
+				display: inline-block;
+				color: #767676;
+				margin-left: 28px;
+				margin-top: 22px;
+				visibility: hidden;
+			}
+			.imgbb:hover .imgyy{
+				visibility: visible;
+				animation-name: fd2;
+				animation-delay: 0;
+				animation-duration: 0.5s;
+			}
+			.imgbb:hover .icon-triangle-play{
+				visibility: visible;
+			}
+			.imgfd{
+				display: inline-block;
+				width: 230px;
+				height: 220px;
+				overflow: hidden;
+				
+			}
+			.imgfd:hover img{
+				transform: scale(2);
+			}
+			.lubei{
+			background-image: url(https://y.qq.com/ryqq/static/media/bg_index_top.5314c494.jpg?max_age=2592000);
+			position: relative;
+			}
+			.yuan{
+				position: absolute;
+				top: 140px;
+				left: 90px;
+				visibility: hidden;
+				display: inline-block;
+				width: 50px;
+				height: 50px;
+				background-color: white;
+				border-radius: 50%;
+			}
+			.lubei:hover .yuan{
+				visibility: visible;
+				animation-name: fd;
+				animation-duration: 0.5s;
+				animation-delay: 0;
+				
+			}
+			@keyframes fd{
+				from{
+					transform: scale(0);
+				}
+				to{
+					transition: all 3s linear 0.2s;
+					width: 50px;
+					height: 50px;
+				}
+			}
+			.yuanjiao{
+				position: absolute;
+				display: inline-block;
+				width: 0;
+				height: 0;
+				border-color: transparent transparent transparent #767676;
+				border-width: 12px;
+				border-left-width: 18px;
+				margin-left: 20px;
+				margin-top: 12px;
+				border-style: solid;
+			}
+		</style>

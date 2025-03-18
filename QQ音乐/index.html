@@ -1,0 +1,1738 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta
+		  name="viewport"
+		    content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, viewport-fit=cover"
+		/>
+		<title>表格实例</title>
+		<link rel="stylesheet" href="//at.alicdn.com/t/c/font_4541549_uvyw0uivynn.css" /><!-- 搜索 -->
+		<link rel="stylesheet" href="//at.alicdn.com/t/c/font_4541549_u5jd8uobcaa.css" /><!-- 左箭头 -->
+		<link rel="stylesheet" href="//at.alicdn.com/t/c/font_4541549_u5jd8uobcaa.css" /><!-- 右箭头 -->
+		<link rel="stylesheet" href="//at.alicdn.com/t/c/font_4541549_ya0n52w9y4m.css" /><!-- 视频播放器 -->
+		<link rel="stylesheet" href="//at.alicdn.com/t/c/font_4541549_low5zk8q1rp.css" />
+		<link rel="stylesheet" href="//at.alicdn.com/t/c/font_4541549_xiz4douo298.css" />
+		<link rel="stylesheet" href="//at.alicdn.com/t/c/font_4541549_xukkdzr26i.css" /><!-- 图片播放 -->
+		<link rel="stylesheet" href="//at.alicdn.com/t/c/font_4541549_so7izukpubj.css" /><!-- 播放 -->
+		<style>
+			*{
+				padding: 0;
+				margin: 0;
+				box-sizing: border-box;
+				text-decoration: none;
+				list-style: none;
+			}
+			.clearfix::after{
+				content: "";
+				clear: both;
+				display: table;
+			}
+			.clearfix{
+				float: left;
+			}
+			.bigbox{
+				position: relative;
+				width: 2780px;
+				height: 4850px;
+				margin: auto;
+			}
+			.box{
+				
+				background-color: #31C27C;
+				height: 4800px;
+				margin: auto;
+			}
+			
+			.top{
+				width: 100%;
+				height: 100px;
+				background-color: white;
+				margin: auto;
+				
+			}
+			.topleft{
+				display: inline-block;
+				width: 300px;
+				height: 100%;
+				background-color: white;
+				text-align: center;
+				padding-top: 30px;
+				padding-left: 80px;
+				
+			margin-left: 690px;
+			}
+			.topleft img{
+				width: 170px;
+				
+				
+			}
+			
+			.topright{
+				width: 1550px;
+				height: 100%;
+				background-color: white;
+				float: right;
+				margin-right: 240px;
+				position: relative;
+				
+			}
+			.rcen{
+				display: inline-block;
+				width: 940px;
+				height: 100px;
+				
+			}
+			.rcen a{
+				color: black;
+				font-size: 18px;
+				display: inline-block;
+				width: 110px;
+				height: 100%;
+				overflow: hidden;
+				padding-top: 40px;
+				
+				text-align: center;
+				
+			}
+			.rcen a:hover{
+				color: #31C27C;
+			}
+			.rcen a:active{
+				background-color: #31C27C;
+				color: #f9f9f9;
+			}
+			.rcen span{
+				position: relative;
+				padding-right: 2px;
+				display: inline-block;
+				border: 1px solid gainsboro;
+				border-radius: 3px;
+				width: 210px;
+				height: 40px;
+				
+				
+			}
+			
+			.rcen input{
+				border: none;
+				width: 180px;
+				height: 38px;
+				font-size: 14px;
+				padding: 0px 0 0 8px;
+				
+			}
+			.rcen button{
+				position: absolute;
+				right: 0;
+				border: none;
+				background-color: white;
+				width: 30px;
+				height: 38px;
+				padding-top: 8px;
+				
+				padding-top: 10px;
+			}
+			.rcen i{
+				display: inline-block;
+				padding-top: 8px;
+				overflow: hidden;
+				width: 30px;
+				height: 40px;
+				font-size: 25px;
+				color: #767676;
+				position: absolute;
+				right: 3px;
+				bottom: 0;
+			}
+			.rcen i:hover{
+				color: #31C27C;
+			}
+			.ankk{
+				display: inline-block;
+				width: 210px;
+				height: 100px;
+				overflow: hidden;
+				padding-top: 30px;
+			}
+			.ankk input{
+				outline: #e1e1e1;
+			}
+			.rkk1{
+				width: 130px;
+				height: 65px;
+				border: none;
+				
+				display: inline-block;
+			
+				
+			}
+			.rkk2{
+				width: 80px;
+				height: 65px;
+				border: none;
+				position: relative;
+				display: inline-block;
+			
+				
+			}
+			.rxkk1{
+				color: white;
+				background-color: #31C27C;
+				width: 130px;
+				height: 40px;
+				text-align: center;
+				
+				margin-right: 8px;
+				padding: 0;
+				font-size: 13px;
+				border-width: 10px;
+				border-color: white;
+				padding: 10px 10px;
+				float: left;
+				position: absolute;
+			}
+			
+			.annu1{
+				display: inline-block;
+				background-color: #31C27C;
+				width: 0;
+				height: 0;
+				border-width: 5px;
+				border-style: solid;
+				border-color: #f9f9f9 transparent transparent transparent;
+				padding: 0;
+				margin: 6px 0 0 0;
+				float: right;
+				position: relative;
+			}
+			.rxkk1:hover .annu1{
+				border-color: transparent transparent #f9f9f9 transparent;
+			}
+			.annu1:hover .text1{
+				display: none;
+			}
+			.rxkk1 a{
+				display: block;
+				width: 130px;
+				height: 40px;
+				color: #000;
+				font-size: 13px;
+				position: absolute;
+				left: 0;
+				top: 40px;
+				border: 1px solid #999999;
+				z-index: 1;
+				padding-top: 10px;
+				background-color: white;
+				
+			}
+			.rxkk1 a:hover{
+				background-color: #31C27C;
+				color: white;
+			}
+			.text1{
+				display: none;
+			}
+			.rxkk1:hover .text1{
+				display: block;
+			}
+			.rxkk2{
+				border: #afafaf 1px solid;
+				position: relative;
+				right: 0;
+				text-align: center;
+				display: inline-block;
+				float: left;
+				width: 80px;
+				height: 40px;
+				padding: 0;
+				font-size: 13px;
+				padding-top: 10px;
+				color: #000;
+			}
+			.rxkk2:hover{
+				background-color: #31C27C;
+				color: white;
+				border-color: white;
+			}
+			.rxkk2:hover .annu2{
+				background-color: #31C27C;
+				border-color: transparent transparent #f9f9f9 transparent;
+			}
+			.rxkk2 a:hover{
+				background-color: #31C27C;
+				color: white;
+			}
+			.text2{
+				display: none;
+			}
+			.rxkk2:hover .text2{
+				display: block;
+				
+			}
+			.rxkk2 a{
+				display: block;
+				border: 1px solid #afafaf;
+				width: 79.8px;
+				height: 40px;
+				position: absolute;
+				top: 38px;
+				right: -0.9px;
+				color: #000;
+				padding-top: 10px;
+				font-size: 13px;
+				background-color: white;
+			}
+			.annu2{
+				display: inline-block;
+				background-color: #f9f9f9;
+				width: 0;
+				height: 0;
+				border-width: 5px;
+				border-style: solid;
+				border-color: #000 transparent transparent transparent;
+				padding: 0;
+				margin: 6px 8px 0 0;
+				float: right;
+			}
+			.annu2:hover{
+				border-color: transparent transparent #000 transparent;
+			}
+			.head{
+				width: 100%;
+				height: 50px;
+				background-color: white;
+				text-align: center;
+			}
+			.head a{
+				color: black;
+				display: inline-block;
+				width: 80px;
+				height: 100%;
+				padding-top: 15px;
+			}
+			
+			.head a:hover{
+				color: #31C27C;
+			}
+			body{
+				width: 2000px;
+				margin: auto;
+			}
+			.body{
+				position: relative;
+				width: 2000px;
+				height: 3600px;
+				background-color: #f9f9f9;
+				margin: auto;
+				
+			}
+			.body p{
+				display: block;
+				width: 100%;
+				height: 100px;
+				background-color: #f9f9f9;
+				font-size: 30px;
+				text-align: center;
+				padding-top: 30px;
+			}
+			.tpkk p{
+				text-align: left;
+			}
+			.tt{
+				width: 1230px;
+				height: 60px;
+				background-color: #f9f9f9;
+				text-align: center;
+				padding-top: 10px;
+				margin: auto;
+				
+			}
+			.icon-bofang{
+				display: inline-block;
+				margin-right: 6px;
+				font-size: 25px;
+				width: 13px;
+				height: 15px;
+				margin: 0;
+				color: #767676;
+			}
+			span a{
+				margin: 0;
+			}
+			.tt i{
+				width: 25px;
+				height: 35px;
+				padding: 5px 0;
+				overflow: hidden;
+			}
+			.tt div{
+				float: left;
+				border: 1px solid gray;
+				
+				display: inline-block;
+				width: 130px;
+				height: 35px;
+				
+			}
+			.tt a{
+				color: black;
+				margin: 0 10px;
+				
+			}
+			.tt a:hover{
+				color: #31C27C;
+			}
+			.body1box{
+				width: 2000px;
+				margin: auto;
+				position: relative;
+				right: 0px;
+			}
+			.body1box:hover .jt1left{
+				display: block;
+				
+			}
+			.body1box:hover .jt1right{
+				display: block;
+			}
+			.body1box .jt1left{
+				display: none;
+			}
+			.body1box .jt1right{
+				display: none;
+			}
+			.body1{
+				
+				width: 1230px;
+				height: 300px;
+				
+				margin: auto;
+			}
+			.ppleft{
+				position: absolute;
+				left: 0;
+				
+			}
+			.ppright{
+				position: absolute;
+				right: 0;
+			}
+			.tpkk{
+				float: left;
+				width: 220px;
+				height: 300px;
+				margin: auto;
+				
+			
+			}
+			
+			.tpkk p:hover{
+				color: #31C27C;
+			}
+			.tpkk img{
+				width: 220px;
+				height: 220px;
+				
+			}
+			.tpkk p{
+				font-size: 14px;
+				width: 100%;
+				height: 25px;
+				margin: 0;
+				padding: 0;
+			}
+			
+			.body2{
+				width: 100%;
+				height: 100px;
+				background-color: palegoldenrod;
+				overflow: hidden;
+			}
+			
+			.hangbox{
+				width: 2000px;
+				margin: auto;
+				position: relative;
+				
+			}
+			.hangbox .jt1left{
+				display: none;
+			}
+			.hangbox:hover .jt1left{
+				display: block;
+			}
+			.hangbox .jt1right{
+				display: none;
+			}
+			.hangbox:hover .jt1right{
+				display: block;
+			}
+			.hang{
+				width: 1230px;
+				height: 380px;
+				background-color: #f9f9f9;
+				
+			}
+			.tpxkk{
+				height: 120px;
+				width: 410px;
+				background-color: #f9f9f9;
+				float: left;
+				margin-bottom: 10px;
+				border-bottom: 1px solid #e1e1e1;
+				position: relative;
+				
+			}
+			.hanggm{
+				color: #000;
+			}
+			.tpxkkmz{
+				color: #999999;
+			}
+			.tpxkk a:hover{
+				color: #31C27C;
+			}
+			.tpxkk img{
+				width: 100px;
+				height: 100px;
+				float: left;
+			}
+			.tpxkk a{
+				
+				display: inline-block;
+				width: 170px;
+				font-size: 12px;
+				margin-left: 15px;
+			}
+			.sj{
+				width: 100px;
+				height: 100px;
+				position: absolute;
+				right: 0;
+				top: 0;
+				padding-left: 50px;
+				padding-top: 35px;
+				
+			}
+			.sj a{
+				width: 100px;
+				margin: 0;
+				color: #999999;
+			}
+			.body3box{
+				width: 2000px;
+				margin: auto;
+				position: relative;
+				
+			}
+			.body3box .jt1left{
+				display: none;
+			}
+			.body3box .jt1right{
+				display: none;
+			}
+			.body3box:hover .jt1left{
+				display: block;
+			}
+			.body3box:hover .jt1right{
+				display: block;
+			}
+			.body3
+			{
+				width: 1230px;
+				height: 400px;
+				background-color: #f9f9f9;
+				
+				margin: auto;
+				
+			}
+			
+			.lgkk{
+				float: left;
+				width: 602px;
+				height: 300px;
+				background-color: #f9f9f9;
+				margin-right: 25px;
+				
+			}
+			.lgkk img{
+				width: 100%;
+			}
+			.body4{
+				width: 1230px;
+				height: 900px;
+				margin: auto;
+			}
+			.body4box{
+				width: 2000px;
+				height: 900px;
+				margin: auto;
+				position: relative;
+				
+			}
+			.body4box .jt1left{
+				display: none;
+			}
+			.body4box .jt1right{
+				display: none;
+			}
+			.body4box:hover .jt1left{
+				display: block;
+			}
+			.body4box:hover .jt1right{
+				display: block;
+			}
+			.tt span:hover{
+				color: #31C27C;
+			}
+			.body5box{
+				width: 2000px;
+				margin: auto;
+				position: relative;
+				
+			}
+			.body5
+			{
+				width: 1200px;
+				height: 580px;
+				margin: auto;
+				overflow: hidden;
+				background-color: #f9f9f9;
+				
+			}
+			.body5 .lubei{
+				width: 224px;
+				height: 500px;
+				background-color: #31C27C;
+				float: left;
+			}
+			.body5 a{
+				display: block;
+				text-align: center;
+				color: white;
+			}
+			.body5 h3{
+				display: block;
+				text-align: center;
+				color: white;
+				margin-top: 70px;
+				font-size: 20px;
+			}
+			
+			i{
+				
+				display: block;
+				text-align: center;
+				color: white;
+				width: 49px;
+				height: 49px;
+				margin: auto;
+			}
+			.body5 li a{
+				text-align: left;
+				padding-left: 55px;
+				font-size: 14px;
+			}
+			.body5 li{
+				margin-bottom: 15px;
+			}
+			.body6{
+				
+				width: 1230px;
+				height: 300px;
+				margin: auto;
+			}
+			.body6box{
+				width: 2000px;
+				margin: auto;
+				position: relative;
+				margin-bottom: 20px;
+			}
+			
+			.body6box .jt1left{
+				display: none;
+			}
+			.body6box .jt1right{
+				display: none;
+			}
+			.body6box:hover .jt1left{
+				display: block;
+			}
+			.body6box:hover .jt1right{
+				display: block;
+			}
+			.dw{
+				width: 100PX;
+				height: 200px;
+				z-index: 1;
+				padding: 20px 0;
+				position: fixed;
+				right: 0;
+				
+			}
+			.dw a{
+				color: black;
+				display: block;
+				text-align: center;
+				border: 1px solid #999999;
+				width: 34px;
+				height: 30px;
+				margin-bottom: 6px;
+				font-size: 12px;
+				padding: 5px 0;
+			}
+			.xddkk
+			{
+				width: 100%;
+				height: 20px;
+				border-width: 30px;
+				border-color: black;
+				background-color: #f9f9f9;
+				overflow: hidden;
+				
+			}
+			.xdd{
+				width: 9px;
+				height: 9px;
+				background-color: #e1e1e1;
+				border-radius: 50%;
+				float: left;
+				margin-right: 20px;
+				opacity: 0.8;
+			}
+			.xdd:hover{
+				background-color: #afafaf;
+			}
+			.xddxkk{
+				width: 145px;
+				height: 20px;
+				margin: auto;
+				
+			}
+			.foot{
+				position: absolute;
+				left: 390px;
+				padding-top: 50px;
+				
+				width: 2000px;
+				height: 750px;
+				background-color: #333333;
+				margin: auto;
+			}
+			.foottop{
+				width: 1230px;
+				height: 570px;
+				margin: auto;
+				background-color: #333333;
+			}
+			.footbuttom{
+				width: 1200px;
+				height: 130px;
+				margin: auto;
+			
+				padding: 20px 0;
+			}
+			.footbox{
+				float: left;
+				margin: 10px;
+				width: 400px;
+				height: 250px;
+				background-color: #333333;
+			}
+			.h1{
+				width: 1200px;
+				height: 28px;
+				text-align: center;
+				font-size: 12px;
+			}
+			.h1 span{
+				color: #999999;
+				margin-left: 5px;
+				
+			}
+			.h1 a{
+				color: #999999;
+			}
+			.h2{
+				width: 1200px;
+				height: 28px;
+				text-align: center;
+				font-size: 12px;
+			}
+			.h2 a{
+				color: #999999;
+			}
+			.h2 span{
+				color: #999999;
+			}
+			.h3 span{
+				color: #999999;
+				font-size: 12px;
+				margin-left: 5px;
+			}
+			.h3{
+				width: 1200px;
+				height: 20px;
+				text-align: center;
+				font-size: 12px;
+			}
+			.h3 a{
+				color: #999999;
+			}
+			.h4 a{
+				display: block;
+				background-color: #767676;
+				height: 30px;
+				width: 280px;
+				color: #999999;
+				padding-top: 3px;
+				margin: auto;
+				
+			}
+			.footbox p{
+				font-size: 15px;
+				width: 100%;
+				height: 50px;
+				text-align: left;
+				color: #999999;
+			}
+			.footbox a{
+				display: inline-block;
+				width: 120px;
+				color: #999999;
+				font-size: 14px;
+				margin-bottom: 12px;
+			}
+			.footbox i{
+				width: 80px;
+				height: 100px;
+				color: #999999;
+				margin: 0 20px 0 0;
+				float: left;
+				font-size: 40px;
+			}
+			
+			hr{
+				
+				height: 1px;
+				background-color: #e1e1e1;
+				border: none;
+			}
+			.jt1left{
+				float: left;
+				
+				width: 80px;
+				height: 100px;
+				background-color: #e1e1e1;
+				
+			}
+			.jt1left i{
+				width: 100%;
+				height: 100%;
+				padding-top: 30px;
+				font-size: 40px;
+				color: #999999;
+			}
+			.jt1right{
+				float: right;
+				width: 80px;
+				height: 100px;
+				background-color: #e1e1e1;
+			}
+			.jt1right i{
+				width: 100%;
+				height: 100%;
+				padding-top: 30px;
+				font-size: 40px;
+				color: #999999;
+			}
+			.jt1left:hover{
+				background-color: #afafaf;
+			}
+			.jt1right:hover{
+				background-color: #afafaf;
+				
+			}
+			.tpkk i{
+				position: relative;
+				margin: 0;
+				width: 150px;
+				height: 50px;
+				padding-bottom: 20px;
+				font-size: 23px;
+				text-align: left;
+			}
+			.icon-shipinbofang{
+				color: #999999;
+			}
+			.tpkk span{
+				position: absolute;
+				top: 2px;
+				left: 30px;
+				font-size: 14px;
+			}
+			.imgbb{
+				width: 230px;
+				height: 220px;
+				display: inline-block;
+				background-color: transparent;
+				position: absolute;
+				top: 0px;
+				left: 380px;
+				padding: 70px 70px;
+			}
+			
+			.imgyy{
+				width: 80px;
+				height: 80px;
+				display: inline-block;
+				background-color: #f9f9f9;
+				border-radius: 50px;
+				visibility: hidden;
+			}
+			@keyframes fd2{
+				from{
+					transform: scale(0);
+				}
+				to{
+					width: 80px;
+					height: 80px;
+				}
+			}
+			.icon-triangle-play{
+				font-size: 35px;
+				display: inline-block;
+				color: #767676;
+				margin-left: 28px;
+				margin-top: 22px;
+				visibility: hidden;
+			}
+			.imgbb:hover .imgyy{
+				visibility: visible;
+				animation-name: fd2;
+				animation-delay: 0;
+				animation-duration: 0.5s;
+			}
+			.imgbb:hover .icon-triangle-play{
+				visibility: visible;
+			}
+			.imgfd{
+				display: inline-block;
+				width: 230px;
+				height: 220px;
+				overflow: hidden;
+				
+			}
+			.imgfd:hover img{
+				transform: scale(2);
+			}
+			.lubei{
+			background-image: url(https://y.qq.com/ryqq/static/media/bg_index_top.5314c494.jpg?max_age=2592000);
+			position: relative;
+			}
+			.yuan{
+				position: absolute;
+				top: 140px;
+				left: 90px;
+				visibility: hidden;
+				display: inline-block;
+				width: 50px;
+				height: 50px;
+				background-color: white;
+				border-radius: 50%;
+			}
+			.lubei:hover .yuan{
+				visibility: visible;
+				animation-name: fd;
+				animation-duration: 0.5s;
+				animation-delay: 0;
+				
+			}
+			@keyframes fd{
+				from{
+					transform: scale(0);
+				}
+				to{
+					transition: all 3s linear 0.2s;
+					width: 50px;
+					height: 50px;
+				}
+			}
+			.yuanjiao{
+				position: absolute;
+				display: inline-block;
+				width: 0;
+				height: 0;
+				border-color: transparent transparent transparent #767676;
+				border-width: 12px;
+				border-left-width: 18px;
+				margin-left: 20px;
+				margin-top: 12px;
+				border-style: solid;
+			}
+		</style>
+	</head>
+	<body>
+		
+		<div class="bigbox">
+			
+				<div class="top">
+					<div class="topleft">
+						<img src="img/logo.png" alt="" />
+					</div>
+					<div class="topright">
+						<div 
+						/class="rcen">
+							<a href="#" style="background-color: #31C27C; color: white;">音乐馆</a>
+							<a href="#">我的音乐</a>
+							<a href="#" style="margin-right: 10px; position: relative;">客户端
+							<img src="//y.qq.com/mediastyle/yqq/extra/mark_1.png?max_age=2592000" class="top_nav__mark" alt="抢特权" width="37px" height="14px" style="position: absolute; left: 60px; top: 30px;">
+							</a>
+							<a href="#" style="margin-right: 10px;">开放平台</a>
+							<a href="#" style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin-right: 10px;">
+							VIP</a>
+							 <div class="ankk">
+								 <span >
+									 <input type="text" placeholder="&nbsp;搜索音乐、MV歌单、用户">
+								 <div class="clearfix" style="display: inline-block;">
+									 <button><i class="iconfont icon-sousuo"></i></button>
+								 </div>
+								   
+								</span>
+							 </div>
+							<a href="#">登录</a>
+						</div>
+						
+						
+							<div class="rkk1">
+								<div class="rxkk1">开通VIP
+								   <div class="annu1"></div>
+								   <div class="text1">
+									   <a href="#">开通超级会员</a>
+									   <a href="#" style="
+									  display: inline-block;
+									  width: 130px;
+									  height: 40px;
+									  font-size: 13px;
+									  position: absolute;
+									  left: 0;
+									  top: 80px;
+									  border: 1px solid #999999;
+									  border-top: none;
+									  padding-top: 10px;
+									  z-index: 1;
+									  
+									   ">开通绿钻豪华版</a>
+								   </div>
+								  
+								</div>
+							</div>
+							<div class="rkk2">
+								<div class="rxkk2">充值
+								<div class="annu2"></div>
+								<div class="text2">
+									<a href="#">购买乐币</a>
+									<a href="#" style="
+									display: block;
+									border: 1px solid #afafaf;
+									border-top: none;
+									width: 80px;
+									height: 40px;
+									position: absolute;
+									top: 78px;
+									padding-top: 10px;
+									z-index: 1;
+									;">充值饭票</a>
+								</div>
+								
+								</div>
+							</div>
+								
+							
+						
+						
+						
+					</div>
+				</div>
+				<hr />
+				<div class="head">
+					<a href="#">首页</a>
+					<a href="#">歌手</a>
+					<a href="#">新碟</a>
+					<a href="#">排名</a>
+					<a href="#">排行榜</a>
+					<a href="#">分类歌单</a>
+					<a href="#">电台</a>
+					<a href="#">MV</a>
+					<a href="#">数字专辑</a>
+				</div>
+				
+				<div class="body">
+					<div class="dw">
+						<a href="#">举报</a>
+						<a href="#">反馈</a>
+						<a href="#">举报</a>
+						<a href="#">反馈</a>
+					</div>
+					<p>歌单推荐</p>
+					<div class="tt">
+						<a href="#" style="color: #31C27C;">为你推荐</a>
+						<a href="#">背景音乐</a>
+						<a href="#">网络风格</a>
+						<a href="#">经典</a>
+						<a href="#">官方歌单</a>
+						<a href="#">情歌</a>
+					</div>
+					<div class="body1box">
+						<div class="jt1left"
+						 style="margin-top: 100px;">
+							<i class="iconfont icon-a-jiantou1"></i>
+						</div>
+						<div class="jt1right"
+						 style="margin-top: 100px;">
+							<i class="iconfont icon-a-jiantou2"></i>
+						</div>
+						<div class="body1">
+							
+							<div class="tpkk" style="margin-right: 30px;">
+								
+									<div class="imgfd"><img src="img/T002R300x300M000000F0gGs4GXp1T_1.webp.jpg" alt="" /></div>
+								<div class="imgbb">
+									<div class="imgyy">
+										<a href="#" class="iconfont icon-triangle-play"></a>
+									</div>
+								</div>
+								
+								<p>这些歌，光听到就已经很遗憾了</p>
+								<p style="color: #999999;">播放量 ：2571.1万</p>
+							</div>
+							<div class="tpkk" style="margin-right: 30px;">
+								<img src="img/T002R300x300M000000kFMYZ2a4UUo_1.webp.jpg" alt="" />
+								<div class="imgbb" style="position: absolute; left: 630px;">
+									<div class="imgyy">
+										<a href="#" class="iconfont icon-triangle-play"></a>
+									</div>
+								</div>
+								<p>抖音歌榜</p>
+								<p style="color: #999999">播放量 ：1052.8万</p>
+							</div>
+							<div class="tpkk" style="margin-right: 30px;">
+								<img src="img/T002R300x300M000002v2t402e7vfw_1.webp.jpg" alt="" />
+								<div class="imgbb" style="position: absolute; left: 880px;">
+									<div class="imgyy">
+										<a href="#" class="iconfont icon-triangle-play"></a>
+									</div>
+								</div>
+								<p>KPOP热歌挑战！DNA动了</p>
+								<p style="color:  #999999;">播放量 ：1948.8万</p>
+							</div>
+							<div class="tpkk" style="margin-right: 30px;">
+								<img src="img/T002R300x300M000003LhkuV4B5fQ1_1 (1).webp.jpg" alt="" />
+								<div class="imgbb" style="position: absolute; left: 1130px;">
+									<div class="imgyy">
+										<a href="#" class="iconfont icon-triangle-play"></a>
+									</div>
+								</div>
+								<p>我从不质疑真心，但真心瞬息万变</p>
+								<p style="color:  #999999;">播放量 ：1030.9万</p>
+							</div>
+							<div class="tpkk">
+								<img src="img/T002R300x300M000000kFMYZ2a4UUo_1.webp.jpg" alt="" />
+								<div class="imgbb" style="position: absolute; left: 1380px;">
+									<div class="imgyy">
+										<a href="#" class="iconfont icon-triangle-play"></a>
+									</div>
+								</div>
+								<p>抖音超热中文歌 ：越听越好听</p>
+								<p style="color:  #999999;">播放量 ：2529.0万</p>
+							</div>
+						
+							<div class="xddkk">
+								<div class="xddxkk">
+									<div class="xdd" style="background-color: #999999;"></div>
+									<div class="xdd"></div>
+									<div class="xdd"></div>
+									<div class="xdd"></div>
+									<div class="xdd"></div>
+								</div>
+							</div>
+						</div>
+					</div>
+							<div class="body2">
+								<p>新歌首发</p>
+							</div>
+							<div class="tt">
+								<div style="padding-bottom: 5px;
+								display: inline-block;
+								">
+									<i class="iconfont icon-bofang"></i>
+									<a href="#"
+									style="margin: 0;
+									display: inline-block;
+									height: 35px;
+									overflow: hidden;
+									padding: 6px 0;
+									color: #000;
+									">播放全部</a>
+								</div>
+								<a href="#" style="color: #31C27C;">最新</a>
+								<a href="#">内地</a>
+								<a href="#">港台</a>
+								<a href="#">欧美</a>
+								<a href="#">韩国</a>
+								<a href="#" style="margin-right: 160px;">日本</a>
+							</div>
+						<div class="hangbox">
+							<div class="jt1left"
+							 style="margin-top: 130px;">
+								<i class="iconfont icon-a-jiantou1"></i>
+							</div>
+							<div class="jt1right"
+							 style="margin-top: 130px;">
+								<i class="iconfont icon-a-jiantou2"></i>
+							</div>
+								<div class="hang" style="margin: auto;">
+									
+									<div class="tpxkk">
+										<img src="img/T002R300x300M000000kFMYZ2a4UUo_1.webp.jpg" alt="" />
+										<a href="#" class="hanggm" style="margin-top: 25px;">赫马佛洛狄忒斯</a><br />
+										<a href="#" class="tpxkkmz">将敦豪</a>
+										<div class="sj"><a href="#">03：54</a></div>
+									</div>
+									<div class="tpxkk">
+										<img src="img/T002R300x300M000002v2t402e7vfw_1.webp.jpg" alt="" />
+										<a href="#" class="hanggm" style="margin-top: 25px;">守护<狐妖小红娘月红篇> 电...</a><br />
+										<a href="#" class="tpxkkmz">黄绮珊</a>
+										<div class="sj"><a href="#">03:20</a></div>
+									</div>
+									<div class="tpxkk">
+										<img src="img/T002R300x300M000000kxnIS1i4Col_1.webp.jpg" alt="" />
+										<a href="#" class="hanggm" style="margin-top: 25px;">称为</a><br />
+										<a href="#" class="tpxkkmz">黄子弘凡</a>
+										<div class="sj"><a href="#">04:18</a></div>
+									</div>
+									<div class="tpxkk">
+										<img src="img/T002R300x300M0000013M4NX2Ma8Rd_1.webp.jpg" alt="" />
+										<a href="#" class="hanggm" style="margin-top: 25px;">醒</a><br />
+										<a href="#" class="tpxkkmz">刘宇</a>
+										<div class="sj"><a href="#">03:03</a></div>
+									</div>
+									<div class="tpxkk">
+										<img src="img/T002R300x300M000001JNKyP1aQK3B_1.webp.jpg" alt="" />
+										<a href="#" class="hanggm" style="margin-top: 25px;">如梦<狐妖小红娘月红篇>电...</a><br />
+										<a href="#"  class="tpxkkmz">张杰</a>
+										<div class="sj"><a href="#">03:22</a></div>
+									</div>
+									<div class="tpxkk">
+										<img src="img/T002R300x300M000001Qf7hz1u0nso_1.webp.jpg" alt="" />
+										<a href="#" class="hanggm" style="margin-top: 25px;">楼外楼（Live）</a><br />
+										<a href="#" class="tpxkkmz">时代少年团</a>
+										<div class="sj"><a href="#">03:26</a></div>
+									</div>
+									<div class="tpxkk">
+										<img src="img/T002R300x300M000002BaR1H2pM5X3_1.webp.jpg" alt="" />
+										<a href="#" class="hanggm" style="margin-top: 25px;">同往<南玉卿心>网剧片尾曲</a><br />
+										<a href="#" class="tpxkkmz">弦子</a>
+										<div class="sj"><a href="#">03:43</a></div>
+									</div>
+									<div class="tpxkk">
+										<img src="img/T002R300x300M000003aF2HU2yKXFZ_1.webp.jpg" alt="" />
+										<a href="#" class="hanggm" style="margin-top: 25px;">天行健<天行健>影视剧主题...</a><br />
+										<a href="#";  class="tpxkkmz">摩登兄弟刘宇宁/傅菁</a>
+										<div class="sj"><a href="#">03:34</a></div>
+									</div>
+									<div class="tpxkk">
+										<img src="img/T002R300x300M0000043FPIj2mUyOb_1.webp.jpg" alt="" />
+										<a href="#" class="hanggm" style="margin-top: 25px;">WAR</a><br />
+										<a href="#" class="tpxkkmz">喻言</a>
+										<div class="sj"><a href="#">03:49</a></div>
+									</div>
+									
+								</div>
+						</div>
+							
+							<div class="xddkk">
+								<div class="xddxkk"
+								style="width: 319px;">
+									<div class="xdd" style="background-color: #999999;"></div>
+									<div class="xdd"></div>
+									<div class="xdd"></div>
+									<div class="xdd"></div>
+									<div class="xdd"></div>
+									<div class="xdd"></div>
+									<div class="xdd"></div>
+									<div class="xdd"></div>
+									<div class="xdd"></div>
+									<div class="xdd"></div>
+									<div class="xdd"></div>
+								</div>
+							</div>
+							<div class="body3box">
+								<div class="jt1left"
+								style="margin-top: 150px;">
+									<i class="iconfont icon-a-jiantou1"></i>
+								</div>
+								<div class="jt1right"
+								style="margin-top: 150px;">
+									<i class="iconfont icon-a-jiantou2"></i>
+								</div>
+								<div class="body3">
+									<p>精彩推荐</p>
+									
+										<div class="lgkk">
+										<img src="img/1ed9e3a91473ffaf6bb5667b6770b9f5 (1).jpg" alt="" />
+										</div>
+										<div class="lgkk" style="margin-right: 0;">
+										<img src="img/f835be0401134ee27ca384320538e75f (1).jpg" alt="" />
+										</div>
+									
+									
+								</div>
+							</div>
+							
+							<div class="xddkk">
+								<div class="xddxkk"
+								style="width: 174px;">
+									<div class="xdd" style="background-color: #999999;"></div>
+									<div class="xdd"></div>
+									<div class="xdd"></div>
+									<div class="xdd"></div>
+									<div class="xdd"></div>
+									<div class="xdd"></div>
+								</div>
+							</div>
+							<div class="body4box">
+								<div class="jt1left"
+								 style="margin-top: 380px;">
+									<i class="iconfont icon-a-jiantou1"></i>
+								</div>
+								<div class="jt1right"
+								 style="margin-top: 380px;">
+									<i class="iconfont icon-a-jiantou2"></i>
+								</div>
+								<div class="body4">
+									<p>新碟首发</p>
+									<div class="tt">
+										<span style="float: right; border: none;">更多<a href="#" style="color: #999999;">></a></span>
+										<a href="#" style="color: #31C27C;">最新</a>
+										<a href="#">内地</a>
+										<a href="#">港台</a>
+										<a href="#">欧美</a>
+										<a href="#">韩国</a>
+										<a href="#">日本</a>
+									</div>
+									<div class="tpkk" style="margin-right: 30px;">
+										<img src="img/T002R300x300M000000kFMYZ2a4UUo_1.webp.jpg" alt="" />
+										<p>你说的谎话</p>
+										<p style="color:  #999999;">王忻辰</p>
+									</div>
+									<div class="tpkk" style="margin-right: 30px;">
+										<img src="img/T002R300x300M000001JNKyP1aQK3B_1.webp.jpg" alt="" />
+										<p>天行健</p>
+										<p style="color:  #999999;">摩登兄弟刘宇宁/傅菁</p>
+									</div>
+									<div class="tpkk" style="margin-right: 30px;">
+										<img src="img/T002R300x300M000002v2t402e7vfw_1.webp.jpg" alt="" />
+										<p>美人谋 网剧影视原声带</p>
+										<p style="color:  #999999;">卓依娜姆</p>
+									</div>
+									<div class="tpkk" style="margin-right: 30px;">
+										<img src="img/T002R300x300M0000043FPIj2mUyOb_1.webp.jpg" alt="" />
+										<p>嘎嘎没烦恼（CCTV3《嘎嘎没烦...</p>
+										<p style="color:  #999999;">海阳/熊猫堂ProducePandas</p>
+									</div>
+									<div class="tpkk">
+										<img src="img/T002R300x300M000002BaR1H2pM5X3_1.webp.jpg" alt="" />
+										<p>></p>
+										<p style="color:  #999999;">KAFE_HU咖啡胡</p>
+									</div>
+									<div class="tpkk" style="margin-right: 30px;">
+										<img src="img/T002R300x300M000003LhkuV4B5fQ1_1 (1).webp.jpg" alt="" />
+										<p>种星星的人 (全长版)</p>
+										<p style="color:  #999999;">朱一龙/杨恩又</p>
+									</div>
+									<div class="tpkk" style="margin-right: 30px;">
+										<img src="img/T002R300x300M000001Qf7hz1u0nso_1.webp.jpg" alt="" />
+										<p>磁带里的人 (Man in the Tape)</p>
+										<p style="color:  #999999;">莫非定律乐团</p>
+									</div>
+									<div class="tpkk" style="margin-right: 30px;">
+										<img src="img/T002R300x300M0000013M4NX2Ma8Rd_1.webp.jpg" alt="" />
+										<p>如梦</p>
+										<p style="color:  #999999;">张杰</p>
+									</div>
+									<div class="tpkk" style="margin-right: 30px;">
+										<img src="img/T002R300x300M000000F0gGs4GXp1T_1.webp.jpg" alt="" />
+										<p>赫马佛洛狄忒斯</p>
+										<p style="color:  #999999;">蒋敦豪</p>
+									</div>
+									<div class="tpkk">
+										<img src="img/T002R300x300M000000kxnIS1i4Col_1.webp.jpg" alt="" />
+										<p>DUNYA</p>
+										<p style="color:  #999999;">那吾克热-NW</p>
+									</div>
+								</div>
+							</div>
+							
+							<div class="xddkk">
+								<div class="xddxkk"
+								style="width: 58px;">
+									<div class="xdd" style="background-color: #999999;"></div>
+									<div class="xdd"></div>
+								</div>
+							</div>
+							<div class="body5box">
+								<div class="body5">
+									<p>排行榜</p>
+									
+										<div style="margin-right: 20px;" class="lubei">
+											<div class="yuan">
+												<div class="yuanjiao"></div>
+											</div>
+											<h3>巅峰榜</h3>
+											<a href="#" style="margin-bottom: 20px; font-size: 26px;">热歌</a>
+											<i>——</i>
+											<ul>
+												<li>
+													<a href="#">1 &nbsp;诺言 (郭有才版)</a>
+													<a href="#">&nbsp;&nbsp;&nbsp;&nbsp;郭有才</a>
+												</li>
+												<li>
+													<a href="#">2若月亮没来 (若是月亮...</a>
+													<a href="#">&nbsp;&nbsp;&nbsp;&nbsp;王宇宙Leto/乔浚丞</a>
+												</li>
+												<li>
+													<a href="#">3无名的人</a>
+													<a href="#">&nbsp;&nbsp;&nbsp;&nbsp;毛不易</a>
+												</li>
+											</ul>
+										</div>
+										<div style="margin-right: 20px;" class="lubei">
+											<div class="yuan">
+												<div class="yuanjiao"></div>
+											</div>
+											<h3>巅峰榜</h3>
+											<a href="#" style="margin-bottom: 20px; font-size: 26px;">新歌</a>
+											<i>——</i>
+											<ul>
+												<li>
+													<a href="#">1&nbsp;&nbsp;诺言 (郭有才版)</a>
+													<a href="#">&nbsp;&nbsp;&nbsp;&nbsp;郭有才</a>
+												</li>
+												<li>
+													<a href="#">2&nbsp;&nbsp;诺言 (正式版)</a>
+													<a href="#">&nbsp;&nbsp;&nbsp;&nbsp;海来阿木</a>
+												</li>
+												<li>
+													<a href="#">3&nbsp;&nbsp;봄눈 (Spring Snow)_</a>
+													<a href="#">&nbsp;&nbsp;&nbsp;&nbsp;10CM</a>
+												</li>
+											</ul>
+										</div>
+										<div style="margin-right: 20px;" class="lubei">
+											<div class="yuan">
+												<div class="yuanjiao"></div>
+											</div>
+											<h3>巅峰榜</h3>
+											<a href="#" style="margin-bottom: 20px; font-size: 26px;">流行指数</a>
+											<i>——</i>
+											<ul>
+												<li>
+													<a href="#">1&nbsp;&nbsp;如果我们在余生相遇_</a>
+													<a href="#">&nbsp;&nbsp;&nbsp;&nbsp;RE-D/是二哈ya</a>
+												</li>
+												<li>
+													<a href="#">2&nbsp;&nbsp;봄눈 (Spring Snow)_</a>
+													<a href="#">&nbsp;&nbsp;&nbsp;&nbsp;10CM</a>
+												</li>
+												<li>
+													<a href="#">3&nbsp;&nbsp;真心很贵别逢人就给</a>
+													<a href="#">&nbsp;&nbsp;&nbsp;&nbsp;任夏</a>
+												</li>
+											</ul>
+										</div>
+										<div style="margin-right: 20px;" class="lubei">
+											<div class="yuan">
+												<div class="yuanjiao"></div>
+											</div>
+											<h3>巅峰榜</h3>
+											<a href="#" style="margin-bottom: 20px; font-size: 26px;">欧美</a>
+											<i>——</i>
+											<ul>
+												<li>
+													<a href="#">1&nbsp;&nbsp;Fortnight</a>
+													<a href="#">&nbsp;&nbsp;&nbsp;&nbsp;Taylor Swift/Post Ma_</a>
+												</li>
+												<li>
+													<a href="#">2&nbsp;&nbsp;Moonlight</a>
+													<a href="#">&nbsp;&nbsp;&nbsp;&nbsp;Ian Asher/SB19/Terr_ </a>
+												</li>
+												<li>
+													<a href="#">3&nbsp;&nbsp;These Walls (Explicit)</a>
+													<a href="#">&nbsp;&nbsp;&nbsp;&nbsp;Dua Lipa</a>
+												</li>
+											</ul>
+										</div>
+										<div class="lubei">
+											<div class="yuan">
+												<div class="yuanjiao"></div>
+											</div>
+											<h3>巅峰榜</h3>
+											<a href="#" style="margin-bottom: 20px; font-size: 26px;">韩国</a>
+											<i>——</i>
+											<ul>
+												<li>
+													<a href="#">1&nbsp;&nbsp;봄눈 (Spring Snow)_</a>
+													<a href="#">&nbsp;&nbsp;&nbsp;&nbsp;10CM</a>
+												</li>
+												<li>
+													<a href="#">2&nbsp;&nbsp;SPOT! (feat. JENNIE)</a>
+													<a href="#">&nbsp;&nbsp;&nbsp;&nbsp;ZICO (지코)/JENNIE_</a>
+												</li>
+												<li>
+													<a href="#">3&nbsp;&nbsp;Supernova</a>
+													<a href="#">&nbsp;&nbsp;&nbsp;&nbsp;aespa (에스파)</a>
+												</li>
+											</ul>
+										</div>
+									
+								</div>
+							</div>
+							<div class="body6box">
+								<div class="jt1left"
+								style="margin-top: 280px;">
+									<i class="iconfont icon-a-jiantou1"></i>
+								</div>
+								<div class="jt1right"
+								style="margin-top: 280px;">
+									<i class="iconfont icon-a-jiantou2"></i>
+								</div>
+									
+									<p>MV</p>
+									<div class="body6" style="height: 500px;">
+										<div class="tt">
+											
+											<a href="#" style="color: #31C27C;">最新</a>
+											<a href="#">内地</a>
+											<a href="#">港台</a>
+											<a href="#">欧美</a>
+											<a href="#">韩国</a>
+											<a href="#">日本</a>
+										</div>
+										<div class="tpkk" style="margin-right: 20px; height: 220px;">
+												<img src="img/微信图片_20240525135342.png" alt="" /
+												 style=" width: 223px;
+												  height: 126px;">
+												<p>称为</p>
+												<p style="color:  #999999;">黄子弘凡</p>
+												<i class="iconfont icon-shipinbofang">
+													<span>68.5万</span>
+												</i>
+										</div>
+										<div class="tpkk" style="margin-right: 30px; height: 220px;">
+												<img src="img/微信图片_20240525135417.png" alt="" / 
+												style=" width: 223px;
+												 height: 126px;">
+												<p>同往</p>
+												<p style="color:  #999999;">弦子</p>
+												<i class="iconfont icon-shipinbofang">
+													<span>6万</span>
+												</i>
+										</div>
+										<div class="tpkk" style="margin-right: 30px; height: 220px;">
+												<img src="img/微信图片_20240525135443.png" alt="" / 
+												style=" width: 223px;
+												 height: 126px;">
+												<p>薄荷糖 (Mint Candy)</p>
+												<p style="color:  #999999;">SNH48</p>
+												<i class="iconfont icon-shipinbofang">
+													<span>56.5万</span>
+												</i>
+												
+										</div>
+										<div class="tpkk" style="margin-right: 30px; height: 220px;">
+												<img src="img/微信图片_20240525135514.png" alt="" / style=" width: 223px; height: 126px;">
+												<p>SUHO《奶酪 (Cheese) (Feat. ...</p>
+												<p style="color:  #999999;">SUHO</p>
+												<i class="iconfont icon-shipinbofang">
+													<span>101.5万</span>
+												</i>
+										</div>
+										<div class="tpkk" style="height: 220px;">
+												<img src="img/微信图片_20240525135417.png" alt="" / style=" width: 223px; height: 126px;">
+												<p>见习爱情</p>
+												<p style="color:  #999999;">冯提莫</p>
+												<i class="iconfont icon-shipinbofang">
+													<span>4680</span>
+												</i>
+										</div>
+										<div class="tpkk" style="margin-right: 30px; height: 220px;">
+												<img src="img/微信图片_20240525135443.png" alt="" / style=" width: 223px; height: 126px;">
+												<p>天灵灵</p>
+												<p style="color:  #999999;">FinesseBoy$/艾志恒Asen</p>
+												<i class="iconfont icon-shipinbofang">
+													<span>5980</span>
+												</i>
+										</div>
+										<div class="tpkk" style="margin-right: 30px; height: 220px;">
+												<img src="img/微信图片_20240525135514.png" alt="" / style=" width: 223px; height: 126px;">
+												<p>豹变</p>
+												<p style="color:  #999999;">莫文蔚/Karen Mok&The Masters</p>
+												<i class="iconfont icon-shipinbofang">
+													<span>8.7万</span>
+												</i>
+										</div>
+										<div class="tpkk" style="margin-right: 30px; height: 220px;">
+												<img src="img/微信图片_20240525135342.png" alt="" / style=" width: 223px; height: 126px;">
+												<p>曾经被遗忘的人</p>
+												<p style="color:  #999999;">林晓峰</p>
+												<i class="iconfont icon-shipinbofang">
+													<span>5.7万</span>
+												</i>
+										</div>
+										<div class="tpkk" style="margin-right: 30px; height: 220px;">
+												<img src="img/微信图片_20240525135443.png" alt="" / style=" width: 223px; height: 126px;">
+												<p>Chase It(Mmm Da Da Da)</p>
+												<p style="color:  #999999;">Bebe Rexha</p>
+												<i class="iconfont icon-shipinbofang">
+													<span>156.5万</span>
+												</i>
+										</div>
+										<div class="tpkk" style="height: 200px;">
+												<img src="img/微信图片_20240525135417.png" alt="" / style=" width: 223px; height: 126px;">
+												<p>有生之年</p>
+												<p style="color:  #999999;">李健</p>
+												<i class="iconfont icon-shipinbofang">
+													<span>3456.5万</span>
+												</i>
+										</div>
+									</div>
+									
+							</div>
+							
+							
+								
+								<div class="xddkk">
+									<div class="xddxkk" style="width: 116px;">
+										<div class="xdd" style="background-color: #999999;"></div>
+										<div class="xdd"></div>
+										<div class="xdd"></div>
+										<div class="xdd"></div>
+									</div>
+								</div>
+								
+							</div>
+							<div class="foot">
+								
+									<div class="foottop">
+										<div class="footbox">
+											<p>下载QQ音乐客户端</p>
+											<i class="iconfont icon-pc">
+												<a href="#" style="width: 50px;">pc版</a>
+											</i>
+											<i class="iconfont icon-anzhuologo">
+												<a href="#" style="width: 50px;">Mac版</a>
+											</i>
+											<i class="iconfont icon-mac">
+												<a href="#" style="width: 80px;">Android版</a>
+											</i>
+											<i class="iconfont icon-pingguo">
+												<a href="#" style="width: 70px;">iPhone版</a>
+											</i>
+										</div>
+										<div class="footbox">
+											<p>特色产品</p>
+											<i class="iconfont icon-quanminkge">
+												<a href="#" style="width: 70px;">全民K歌</a>
+											</i>
+											<i class="iconfont icon-caidanlan_yinxiao">
+												<a href="#" style="width: 70px;">银河音效</a>
+											</i>
+											<i class="iconfont icon-mac">
+												<a href="#" style="width: 80px;">QPlay</a>
+											</i>
+											<i class="iconfont icon-pingguo">
+												<a href="#" style="width: 80px;">Fan直播伴侣</a>
+											</i>
+											<a href="#" style="padding-left: 15px;">车载互联</a>
+											<a href="#">QQ演出</a>
+										</div>
+										<div class="footbox" style="width: 370px;">
+											<p>合作链接</p>
+											<a href="#">CJ ENM</a>
+											<a href="#">腾讯视频</a>
+											<a href="#">手机QQ空间</a>
+											<a href="#">最新版QQ</a>
+											<a href="#">腾讯社交广告</a>
+											<a href="#">电脑管家</a>
+											<a href="#">QQ浏览器</a>
+											<a href="#">腾讯微云</a>
+											<a href="#">腾讯云</a>
+											<a href="#">企鹅FM</a>
+											<a href="#">智能电视网</a>
+											<a href="#">当贝市场</a>
+											<a href="#">酷我音乐</a>
+											<a href="#">酷狗听书</a>
+											
+										</div>
+										<div class="footbox">
+											<p>开放平台</p>
+											<a href="#" style="width: 130px;">QQ音乐开放平台</a>
+											<a href="#" style="width: 100px;">腾讯音乐人</a>
+											<a href="#">音乐推-歌曲推广</a>
+											<a href="#" style="width: 150px;">TME聚星-歌曲定制</a>
+											<a href="#" style="width: 230px;">启明星Venus-词曲交易/歌曲推广</a>
+											<a href="#" style="width: 100px;">TME Studio</a>
+											<a href="#">臻品音质认证</a>
+										</div>
+										<div class="footbox">
+											<p>TME集团官网</p>
+											<a href="#">腾讯音乐</a>
+										</div>
+									</div>
+									<div class="footbuttom">
+										<div class="h1">
+											<a href="#">关于腾讯</a><span>|</span>
+											<a href="#">About Tencent</a><span>|</span>
+											<a href="#">服务条款</a><span>|</span>
+											<a href="#">用户服务协议</a><span>|</span>
+											<a href="#">隐私政策</a><span>|</span>
+											<a href="#">权利声明</a><span>|</span>
+											<a href="#">广告服务</a><span>|</span>
+											<a href="#">腾讯招聘</a><span>|</span>
+											<a href="#">客服中心</a><span>|</span>
+											<a href="#">网站导航</a><span>|</span>
+											<a href="#">举报中心</a>
+										</div>
+										<div class="h2">
+											<span>Copyright © 1998 - 2024 Tencent.<a href="#">All Rights Reserved.</a></span>
+										</div>
+										<div class="h3">
+											<a href="#">腾讯公司版权所有</a><span>|</span>
+											<a href="#">营业执照</a><span>|</span>
+											<a href="#">网络文化经营许可证：粤网文[2023]2882-203号</a><span>|</span>
+											<a href="#">客服电话：4006016666</a><span>|</span>
+											<a href="#">违法与不良信息举报邮箱：tme_musicjubao@tencentmusic.com</a>
+										</div>
+										<div class="h4">
+											<a href="">tme_musicjubao@tencentmusic.com</a>
+										</div>
+									</div>
+								
+							</div>
+					</div>
+					
+						<!-- 页脚 -->
+					</div>
+					
+				</div>
+				
+			</div>
+			
+		</div>
+		
+	</body>
+</html>
