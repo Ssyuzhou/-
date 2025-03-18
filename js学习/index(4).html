@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>函数3</title>
+</head>
+<body>
+    <script>
+        //函数声明：函数调用，参数，返回值
+        //函数表达式：将函数赋给一个变量，用变量值调用
+        let fn = function add(a,b){
+            return a+b;
+        };
+        //立即执行函数（匿名函数自调用）
+        (
+            function(){
+                console.log('立即执行');
+            }
+        )();
+        //回调函数：把函数当作另一个函数的参数传入，在另一个函数中调用
+        //递归函数：把函数当作自己函数本身的参数，在函数自身调用自己
+        //*递归执行容易造成死循环
+        //把函数当作返回值 > 闭包
+        let fn1 = function(a,b){
+            return a+b;
+        };
+        let fn2 = function(f){
+            return f;
+        };
+        console.log(fn2(fn1(5,6)));
+        //作用域：变量作用范围var let const（常量，值不可以再修改）
+        /*
+        js代码运行的两个阶段和函数
+            1.解析（编译）：语法检查，声明变量和函数
+            2.运行：变量赋值，按执行流程执行代码\
+        var与let区别
+            1.var可以重复声明（都能打印），let不行
+            2.var允许变量提升，let没有（暂时性死去） > var允许先使用后声明，let访问前必须声明变量
+            3.var,let都有全局作用域，函数作用域，对于let多了一块{}作用域
+        */
+        // console.log(t1);
+        // var t1 = 123;  //未定义
+        // console.log(t2);
+        // let t2 = 456;  //初始化之前不可以访问
+
+
+        //全局变量
+        let num1 = 10;
+        let num2 = 20;
+        function fun(){
+            //局部变量（函数局部作用域）
+            let fun1 = 'hello';
+            var fun2 = 'js';
+            console.log(num1);
+            console.log(num2);
+            console.log(fun1);
+            console.log(fun2);
+        }
+        fun();
+        console.log('------------');
+        console.log(num1);
+        console.log(num2);
+        // console.log(fun1);
+        // console.log(fun2);
+
+    </script>
+    <script>
+        //执行上下文：js代码执行的环境
+        let name = 'tom';
+        function fn1(){
+            let age = 10;
+            function fn2(){
+                let sex = '女';
+                console.log(name);
+                console.log(age);
+                console.log(sex);
+            }
+            fn2();
+        }
+        fn1();
+    </script>
+</body>
+</html>

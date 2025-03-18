@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>函数</title>
+    <!-- 可以重复使用的代码块 -->
+</head>
+<body>
+    <script>
+        // 函数声明
+        function myfunction(a,b){
+            //函数体
+            // alert('您好');
+            return a + b;
+        }
+        //调用函数
+        myfunction(3,6);
+        console.log('结果:' + myfunction(3,6));
+
+
+        function myfunction2(age){
+            console.log('你的年龄' + age);
+        }
+        myfunction2('18');
+
+
+        //比较大小
+        function myfunction3(x,y){
+            console.log(arguments);//参数，不是数组
+            console.log(arguments.length);//获取参数个数
+            console.log(arguments[0]);//通过索引，（0开始），获取对应参数值
+            if(x>y){
+                console.log('最大值是:' + x);
+            }
+            if(x<y){
+                console.log('最大值是:' + y);
+            }
+        }
+        //完善最大值的函数
+        //1.保证输入的参数不少于2个；
+        //2.保证传入的参数必须是数值型；typeof（判断数据类型）
+        //不满足以上两个条件的情况打印’参数不合法‘
+        myfunction3(5,6);                                                                                                                                                                    {
+
+        }
+
+
+        function geyMax(){
+            if(arguments.length >=2 ){//判断参数>=2则作比较，不符合则参数不合法
+                let Max = arguments[0];//定义最大值为参数（不定个数），索引
+                for(let i=0; i<arguments.length; i++){//定义另一个数值i，长度
+                    if(typeof arguments[i] != 'number'){//如果数据类型不是数值，则参数不合法
+                        console.log('参数不合法');
+                        return NaN;//结束语句
+                    }
+                    else{
+                        //找数组的最大值
+                        if(arguments[i]>Max){//作比较
+                            Max = arguments[i];
+                        }
+                    }
+                }
+                console.log(Max);
+            }
+            else{
+                console.log('参数不合法');
+                return NaN;//结束语句
+            }
+        }
+        geyMax();
+        geyMax(1,2);
+        geyMax('2','haha');
+        geyMax(1,4,6,2,645);
+
+
+    </script>
+    <button onclick="">1</button>
+    <button onclick="">2</button>
+    <hr>
+    <div class="res" style="width: 80px; height: 30px; border: 3px solid black;"></div>
+    <script>
+        function js(num1,num2                                                                                                     ){
+
+        }
+    </script>
+
+</body>
+</html>

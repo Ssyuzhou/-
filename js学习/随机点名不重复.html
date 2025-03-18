@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<style>
+	</style>
+	<body>
+		
+		<button class="btn">点击抽人</button>
+		<div class="text"></div>
+		<script>
+			//获取容器元素
+			let container = document.querySelector('.text');
+			//创建数组储存已显示的数字
+			let arr = [];
+			//获取事件源
+			let a = document.querySelector('.btn');
+			//事件类型及时间处理程序
+			a.addEventListener('click',function(){
+				//在do代码块外定义随机数，防止后续引用无定义
+				let sjs;
+				do{
+					sjs = Math.floor(Math.random()*10);
+				}while(arr.includes(sjs));
+				//while中判断数组中是否存在生成的随机数（第一次不存在，则不循环。重复后则不往下进行显示数字）
+				//将随机数放在数组中
+				arr.push(sjs);
+				//创建文本节点，存放生成随机数
+				let textnode = document.createTextNode(sjs);
+				//创建p元素节点，添加随机数文本节点
+				let ptext = document.createElement('p');
+				//添加随机数在p元素里
+				ptext.appendChild(textnode);
+				//添加p元素在容器div节点里
+				container.appendChild(ptext);
+			});
+		</script>
+	</body>
+</html>

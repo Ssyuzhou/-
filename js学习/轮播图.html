@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<style>
+				
+			*{
+				padding: 0;
+				margin: 0;
+				text-decoration: none;
+				box-sizing: border-box;
+				list-style: none;
+			}
+			.bigbox{
+				width: 2500px;
+				height: 3000px;
+				background-color: white;
+				margin: auto;
+			}
+			.top{
+				width: 1800px;
+				height: 150px;
+				background-color: white;
+				margin: auto;
+			}
+			.topleft{
+				width: 380px;
+				height: 100%;
+				background-color: white;
+				float: left;
+				padding-top: 20px;
+			}
+			.topleft img{
+				width: 380px;
+				
+			}
+			.topright{
+				
+				width: 1350px;
+				height: 100%;
+				background-color: white;
+				float: right;
+				padding-top: 40px;
+			}
+			.topright a{
+				display: inline-block;
+				width: 250px;
+				height: 70px;
+				color: black;
+				font-size: 20px;
+				padding-top: 10px;
+				border-left: 1px dotted gray;
+				padding-left: 20px;
+			}
+			.topright span{
+				color: gray;
+			}
+			.head{
+				position: relative;
+				width: 100%;
+				height: 500px;
+				background-color: #1f1f1f;
+			}
+			.overall{
+				padding-top: 40px;
+				width: 1200px;
+				height: 500px;
+				align-items: center;
+				margin: 10px auto;
+				background-color: #1f1f1f;
+			}
+			.content{
+				position: relative;
+				height: 400px;
+			}
+			.content ul{
+				list-style-type: none;
+			}
+			.content ul>li{
+				width: 600px;
+				height: 300px;
+				position: absolute;transition: 1s;
+				opacity: 0;
+			}
+			.content ul>li img{
+				width: 1200px;
+				height: 485px;
+				border-radius: 10px;
+				
+			}
+			.content ol{
+				width: 200px;
+				position: relative;
+				display: grid;
+				grid-template-columns: repeat(5,20px);
+				grid-auto-rows: auto;
+				grid-gap: 1em;
+				gap: 1em;
+				float: left;
+				margin-top: 450px;
+				margin-left: 20px;
+				top: 0;
+				left: 0;
+			}
+			.content ol li{
+				width: 18px;
+				height: 18px;
+				font-size: 15px;
+				line-height: 20px;
+				float: left;
+				text-align: center;
+				border-radius: 50%;
+				border: 5px solid #1f1f1f;
+			}
+			.body{
+				width: 100%;
+				height: 800px;
+				background-color: white;
+				padding-top: 80px;
+			}
+			.bhead{
+				width: 1600px;
+				height: 100px;
+				font-size: 50px;
+				text-align: center;
+				margin: auto;
+				border-bottom: 1px solid #888888;
+			}
+			.dkk{
+				width: 1600px;
+				height: 580px;
+				background-color: white;
+				margin: auto;
+				border-bottom: 1px solid gray;
+			}
+			.kk{
+				width: 380px;
+				height: 570px;
+				padding-top: 50px;
+				float: left;
+			}
+			.kk p{
+				color: #11719e;
+				font-size: 25px;
+			}
+			.kk span{
+				font-size: 16px;
+				color: gray;
+				
+			}
+			.kk img{
+				width: 380px;
+				height: 210px;
+				margin: 20px 0;
+				border: 1px solid #ddd;
+				padding: 10px;
+			}
+			.kk button{
+				border: none;
+				border-radius: 5px;
+				width: 180px;
+				height: 40px;
+				text-align: left;
+				margin-top: 20px;
+				padding-left: 10px;
+				color: #11719e;
+				
+			}
+			.kk button:hover{
+				background-color: #ddd;
+			}
+			.dd{
+				width: 1600px;
+				height: 600px;
+				background-color: white;
+				margin: auto;
+			}
+			.dk{
+				float: left;
+				width: 480px;
+				height: 600px;
+			}
+			.tt{
+				font-size: 25px;
+				height: 50px;
+				border-bottom: 1px dashed gray;
+				
+			}
+			.tb{
+				margin-top: 10px;
+				width: 100%;
+				height: 100px;
+				margin-bottom: 40px;
+			}
+			.tb img{
+				width: 90px;
+				height: 90px;
+			}
+			.ww{
+				font-weight: bold;
+				height: 40px;
+				border-bottom: 1px dashed gray;
+			}
+			.dk input{
+				height: 40px;
+				width: 100%;
+				border-radius: 5px;
+				border-color: #888888;
+				padding-left: 10px;
+			}
+			.dk button{
+				border: none;
+				height: 35px;
+				width: 250px;
+				margin-top: 20px;
+				border-radius: 5px;
+				text-align: left;
+				padding-left: 10px;
+				background-color: #4c83bd;
+			}
+			.dk button:hover{
+				background-color: #406e9a;
+			}
+			.dkkk{
+				float: left;
+				width: 480px;
+				height: 600px;
+				margin-left: 75px;
+				
+			}
+			.dkkkk{
+				float: left;
+				width: 480px;
+				height: 600px;
+				margin-left: 75px;
+			}
+			.wb1{
+				display: block;
+				margin-top: 20px;
+				width: 100%;
+				height: 40px;
+				padding-left: 10px;
+				border-radius: 5px;
+			}
+			.wb2{
+				display: block;
+				margin-top: 20px;
+				width: 100%;
+				height: 40px;
+				padding-left: 10px;
+				border-radius: 5px;
+			}
+			.wb3{
+				display: block;
+				margin-top: 20px;
+				width: 100%;
+				height: 220px;
+				padding-left: 10px;
+				border-radius: 5px;
+				padding-bottom: 180px;
+			}
+			.dkkk button{
+				border: none;
+				background-color: #4c83bd;
+				height: 35px;
+				width: 250px;
+				margin-top: 20px;
+				border-radius: 5px;
+				text-align: left;
+				padding-left: 10px;
+			}
+			.dkkk button:hover{
+				background-color: #406e9a;
+			}
+			.tbxkk{
+				height: 120px;
+				border-bottom: 1px dashed gray;
+			}
+			.tbxkk img{
+				width: 60px;
+				float: left;
+				margin-top: 20px;
+				border: 1px solid #ddd;
+				padding: 5px;
+			}
+			.tbxkk p{
+				font-size: 18px;
+				width: 400px;
+				float: right;
+				margin-top: 20px;
+			}
+			.dkkkk button{
+				border: none;
+				background-color: #4c83bd;
+				height: 35px;
+				width: 250px;
+				margin-top: 20px;
+				border-radius: 5px;
+				text-align: left;
+				padding-left: 10px;
+			}
+			.dkkkk button:hover{
+				background-color: #406e9a;
+			}
+			.foot{
+				height: 300px;
+				background-color: #333333;
+			}
+			.ftext{
+				width: 1600px;
+				margin: auto;
+				background-color: #333333;
+				height: 300px;
+				padding-top: 10px;
+			}
+			.fleft{
+				width: 550px;
+				float: left;
+				color: #7e7e7e;
+			}
+			.fright{
+				width: 500px;
+				float: right;
+				color: #7e7e7e;
+			}
+		</style>
+	</head>
+	
+	<body>
+		<div class="bigbox">
+			<div class="top">
+				<div class="topleft"><img src="img/360.png" alt="" /></div>
+				<div class="topright">
+					<a href="#">HOME<br /><span>Back to home</span></a>
+					<a href="#">PRODUCTS<br /><span>What we have for you</span></a>
+					<a href="#">SERVICES<br /><span>Tings we do</span></a>
+					<a href="#">BLOG<br /><span>Follow our updates</span></a>
+					<a href="#">CONTACT<br /><span>Ways to reach us</span></a>
+				</div>
+			</div>
+			<div class="head">
+				<div class="overall">
+					<div class="content">
+						<ul>
+							<li><img src="img/轮播.jpg" alt="" /></li>
+							<li><img src="" alt="" /></li>
+							<li><img src="" alt="" /></li>
+							<li><img src="img/轮播.jpg" alt="" /></li>
+							<li><img src="" alt="" /></li>
+						</ul>
+						<ol>
+							<li></li>
+							<li></li>
+							<li></li>
+							<li></li>
+							<li></li>
+						</ol>
+					</div>
+				</div>
+				<script>
+				    // 当页面载入的时候加载这个函数
+				    window.onload = function()
+				    {
+				
+				    // 获取大盒子的内容 为content的第一个元素 也就是ul中的内容
+				    var content = this.document.getElementsByClassName("content")[0];
+				
+				    // 获取ul中的li
+				    var li = content.getElementsByTagName("li");
+				
+				    // 函数传入两个参数，(i,j)
+				    function fun(i, j)
+				    {//转换图片函数，就是把透明度改了一下        
+				        li[i].style.opacity=1;
+				        li[j].style.opacity=0;
+				
+				        // 然后也把小图标的颜色改一下
+				        // 把图标改成白色
+				        // 如果图片数量发生改变 那么下面的3也要变成图片的数量
+				        li[i + 5].style.backgroundColor = "#ffffff";
+				
+				        // 把图标改成透明
+				        li[j + 5].style.backgroundColor = "#00000000";
+				    }
+				
+				    // 默认情况下轮播图为第一张
+				    fun(0, 1);//初始化下
+				    var i = 0;
+				    function auto()
+				    {//轮播循环函数
+				        i ++;
+				        // 当数组越界的时候
+				        if(i >= 5)
+				        {
+				        // 置为0
+				            i = 0;
+				            // 然后递归重新开始
+				            // 这里的2位3-1的意思
+				            fun(0, 4);
+				        }
+				        else
+				        {
+				            // 反之递归
+				            fun(i, i - 1);
+				        } 
+				    }
+				    // 设置变化的时间
+				    timer = this.setInterval(auto, 2000);
+				
+				    // 设置鼠标在轮播图上的时候 轮播图就停止播放
+				    content.onmouseover = function () 
+				    { 
+				        //鼠标划上去，停止轮播
+				        clearInterval(timer);
+				    }
+				
+				    // 设置鼠标在轮播图上的时候 轮播图就继续播放
+				    content.onmouseout = function () 
+				    { 
+				        //鼠标划出，继续轮播
+				        timer = setInterval(auto, 2000); //调用定时器
+				    }
+				    var j = 0;
+				    for(; j < 5; j++)
+				    {
+				        //点击小图标也可以转换图片
+				        li[j + 5].index = j;
+				        // 当点击小图标进行的函数
+				        li[j + 5].onclick = function()
+				        {
+				            fun(this.index, i)
+				            i = this.index;
+				        }
+				    }
+				}
+				</script>
+				
+
+			</div>
+			<div class="body">
+				<p class="bhead">Lorem ipsum dolor sit amet, consectur adipiscing elit</p>
+				<div class="dkk">
+					<div class="kk">
+									<p>Perfect Logic</p>
+									<span>All you want your website to do.</span>
+									<img src="img/1.jpg" alt="" />
+									<p style="color: black; font-size: 17px;">Sed ut perspiciatis unde omnis iste natus<br/>
+										error sit voluptatem accusantium<br/>
+					doloremque laudantium, totam rem aperiam,<br/>
+					eaque ipsa quae ab illo inventore veritatis et<br/>
+					quasi architecto beatae vita dicta sunt</p>
+					<button>Learn More</button>
+					</div>
+					<div class="kk" style="margin-left: 230px;">
+									<p>Compete Solution</p>
+									<span>A tool anyting and everything you can think</span>
+									<img src="img/3.jpg" alt="" />
+									<p style="color: black; font-size: 17px;">
+										Nemo enim ipsam voluptatem quia voluptas<br/>
+sit aspernatur aut odit aut fugit, sed quia<br/>
+consequuntur magni dolores eos qui ratione<br/>
+voluptatem sequi nesciun tdolore magnam<br/>
+aliquam quaerat voluptatem.</p>
+					<button>Learn More</button>
+					</div>
+					<div class="kk" style="margin-left: 230px;">
+									<p>Uber Culture</p>
+									<span>Fresh.Modern and ready for future</span>
+									<img src="img/2.jpg" alt="" />
+									<p style="color: black; font-size: 17px;">
+										Neque porro quisquam est, qui dolorem<br/>
+ipsum quia dolor sit amet, consectetur,<br/>
+adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore<br/>
+magnam aliquam quaerat voluptatem.</p>
+					<button>Learn More</button>
+					</div>
+				</div>
+				
+				
+			</div>
+			<div class="dd">
+				<div class="dk">
+					<p class="tt">Social Connection</p>
+					<p style="margin-top: 15px;">At vero eos et accusamus et iusto odio dignissimos
+ducimus aur olanditis oraesentum</p>
+					<div class="tb">
+						<img src="img/图标1.png" alt="" />
+						<img src="img/图标2.png" alt="" />
+						<img src="img/图标3.png" alt="" />
+						<img src="img/图标4.png" alt="" / style=" margin-bottom: 5px;">
+						<img src="img/图标5.png" alt="" />
+					</div>
+					<p class="ww">Newsletter</p>
+					<p style="margin: 15px 0;">At vero eos et accusamus et iusto odio dignissimos
+ducimus qui blanditis presentium</p>
+<input type="text" placeholder="your emall address"/>
+<button>Subscribe</button>
+				</div>
+				<div class="dkkk">
+					<p class="tt">Contact</p>
+					<input type="text" placeholder="your name"/ class="wb1">
+					<input type="text" placeholder="your emall address"/ class="wb2">
+					<input type="text" placeholder="massage"/ class="wb3">
+					<button>Send it</button>
+				</div>
+				<div class="dkkkk">
+					<p class="tt">New Updates</p>
+					<div class="tbxkk">
+						<img src="img/右下1.jpg" alt="" />
+						<p>Lorem ipsum dolor sit amet, consectetur
+adipisicing elit, sed do eiusmod tempor
+incioldunt ur labore e dolore maana alcua</p>
+					</div>
+					<div class="tbxkk">
+						<img src="img/右下2.jpg" alt="" />
+						<p>Sed ut perspiciatis unde omnis iste natus
+error sit voluptatem accusantium
+doloremque laudantium totam rem
+avellall!</p>
+					</div>
+					<div class="tbxkk">
+						<img src="img/右下3.jpg" alt="" />
+						<p>At vero eos et accusamus et iusto odio
+dignissimos ducimus qui blanditiis presen-tium.</p>
+					</div>
+					<button>Visit our Blog</button>
+				</div>
+			</div>
+			<div class="foot">
+				<div class="ftext">
+					<div class="fleft">
+										<p> Site Powered by Wordpress. Design and Developed by VIVROCKS</p>
+										<p>Home l About I Products I Services 1 Contact</p>
+										<p>Privacy Policy I Terms of use</p>
+					
+									</div>
+									<div class="fright">
+										<p>Copyright 2010. Studio VIVROCKS. AII Rights Reserved.</p>
+									</div>
+				</div>
+				
+			</div>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<link rel="stylesheet" href="//at.alicdn.com/t/c/font_4541549_q9attajthw.css" /><!-- 叉叉 -->
+	<style>
+		*{
+			padding: 0;
+			margin: 0;
+			box-sizing: border-box;
+		}
+		.ad_img{
+			width: 350px;
+			height: 500px;
+			background-image: url('https://p0.ssl.qhimgs1.com/sdr/400__/t0302971501161e9cd0.jpg');
+			background-repeat: no-repeat;
+			background-size: 350px 500px;
+			padding: 10px;
+		}
+		.ad_text{
+			display: inline-block;
+			padding: 8px;
+			float: right;
+			background-color: rgba(0, 0, 0, 0.3);
+		}
+		.icon-chacha{
+			background-color: rgba(0, 0, 0, 0.3);
+			padding: 12px;
+			border-radius: 50px;
+			float: right;
+			display: none;
+		}
+	</style>
+	<body>
+		<div class="imgbox">
+			<div class="ad_img">
+				<div class="ad_text">
+				</div>
+				<i class="iconfont icon-chacha" onclick="xiaoshi()"></i>
+				<script>
+					function xiaoshi(){
+						let ad = document.querySelector('.ad_img');
+						ad.style.display = 'none';
+					}
+				</script>
+			</div>
+			
+		</div>
+		<script>
+			//获取广告图片的盒子、提醒字
+			let ad = document.querySelector('.ad_img');
+			let tip_text = document.querySelector('.ad_text');
+			//定义倒计时时间秒数
+			let time = 3;
+			//加入定时器
+			let timer = setInterval(timer_func,1000);
+			function timer_func(){
+				if(time==0){
+					// ad.style.display = 'none';
+					document.querySelector('.ad_text').style.display = 'none';
+					document.querySelector('.icon-chacha').style.display = 'inline-block';
+					clearInterval(timer);
+				}
+				tip_text.innerHTML = time + '秒后可关闭广告';
+				time--;
+				
+			}
+		</script>
+	</body>
+</html>

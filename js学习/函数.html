@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    /* 定义盒子的样式 */
+   .box {
+      width: 100px;
+      height: 100px;
+      margin: 10px;
+      background-color: lightblue;
+      display: inline-block;
+    }
+  </style>
+  <title>Change Box Colors</title>
+</head>
+
+<body>
+  <!-- 创建三个盒子 -->
+  <div class="box"></div>
+  <div class="box"></div>
+  <div class="box"></div>
+
+  <!-- 创建按钮 -->
+  <button onclick="changeColors()">改变颜色</button>
+
+  <script>
+    function changeColors() {
+      // 获取所有盒子元素
+      var boxes = document.querySelectorAll('div');
+
+      // 循环遍历每个盒子并设置新颜色
+      boxes.forEach(function (box) {
+        // 这里生成随机颜色，你也可以设置特定颜色
+        var randomColor = '#' + Math.floor(Math.random() * 16777215).toString(16);
+        box.style.backgroundColor = randomColor;
+      });
+    }
+  </script>
+</body>
+
+</html>

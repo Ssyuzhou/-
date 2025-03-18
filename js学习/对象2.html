@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>对象2</title>
+</head>
+<body>
+    <script>
+        /*创建对象
+        1.字面量创建
+        2.构造函数，定义函数，实例化对象new
+        3.new Object（）
+        */
+       console.log(Math.PI);
+       console.log(Math.max(2,54,65,9575.45,65456,364,63));
+       function num(min,max){
+        let minnum = Math.ceil(min);    //向上取整1
+        let maxnum = Math.floor(max);      //向下取整5
+        return Math.floor(Math.random()*(maxnum - minnum +1) + minnum);
+        //(5-1+1)*0.234+1
+       }
+       let number = confirm(prompt('输入值:'));
+       let boom = num(1,5);
+       console.log(num(1,5));
+       while(true){
+        if(number == boom ){
+            alert('对了');
+            break;
+        }
+        else if(number < boom){
+            alert('小了');
+        }
+        else{
+            alert('大了');
+
+        }
+       }
+       let name = ['张三','李四','王五','老六','七十','八卡'];
+       console.log(name);
+    </script>
+</body>
+</html>

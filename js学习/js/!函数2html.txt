@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>函数2</title>
+</head>
+<body>
+    <script>
+        //函数表达式
+        //定义一个函数(把函数当作一个值赋给变量)
+        let f1 = function fun1(){
+            console.log('hello f1');
+        };
+        //函数调用
+        f1();
+        //(函数调用位置可在函数表达式前后，
+        //如果函数被定义则不能在定义前调用，否者报错)
+        let f2 = function fun2(name){
+            console.log('hello' + name);
+        };
+        f2('老六');
+        //匿名函数
+        let f3 = function (a,b){
+            return a<b?a:b;
+        };
+        console.log('最小值是：' + f3(3,5));
+        //立即执行函数
+        (function(x,y){
+            console.log(x + y);
+        })
+        (3,8);
+        function myfunction(){
+            alert('警告');
+            confirm('确认退出');
+            prompt('输入密码');
+            
+        }
+
+        //函数的数据类型：对象object，和数组一样
+        let k = function(){
+            console.log('123');
+        };
+        console.log(typeof k);
+
+
+    //把函数这个值作为实数传给另一个函数、
+    //回调函数：函数a当作参数传授给函数b，在函数b中调用函数a，函数a叫回调函数
+    let myf1 = function(age){
+        age();//这里直接打印myf2
+    };
+    let myf2 = function(){
+        console.log('myf2');
+    };
+    myf1(myf2);//age=myf2；给age赋值；
+    //递归函数：在函数中调用自己
+    //阶乘： 10！= 10*9*8....*1 >10*(9!) >10*9*(8!) ......
+    let jc = function(n){
+        if(n===1){
+            return 1;
+        }
+        else{
+            return n*jc(n-1);
+        }
+    };
+    console.log(jc(3));
+    </script>
+    <input type="button" value="点击" onclick="myfunction()">
+    <br><hr>
+    <!-- 立即执行的函数 -->
+    <input type="button" value="点击" onclick="(function(){alert('你别点我');}) ()">
+
+    <h1 id="demo"></h1>
+    <script>
+        document.getElementById('demo').innerHTML = f3(9,2);
+    </script>
+    </body>
+</html>

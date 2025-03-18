@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+	</head>
+	<style>
+		.box{
+			width: 300px;
+			height: 300px;
+			background-color: pink;
+		}
+		.smbox{
+			width: 200px;
+			height: 200px;
+			background-color: greenyellow;
+		}
+	</style>
+	<body>
+		<!-- 事件流--事件对象使用 -->
+		<!-- capture可选参数，布尔类型。
+		true,false事件监听。
+		true：表示在捕获间断调用时间处理程序捕获
+		false：表示在冒泡阶段调用时间处理程序 -->
+		<div class="box">
+			<div class="smbox">
+			</div>
+		</div>
+		<table border="1" cellpadding='0' cellspacing= '0'>
+			<form action="">
+				<caption>表格</caption>
+				<tr>
+					<th>111111</th>
+					<th>222222</th>
+					<th>333333</th>
+				</tr>
+				<tr>
+					<td>1</td>
+					<td>2</td>
+					<td>3</td>
+				</tr>
+				<tr>
+					<td>1</td>
+					<td>2</td>
+					<td>3</td>
+				</tr>
+				<tr>
+					<td>1</td>
+					<td>2</td>
+					<td>3</td>
+				</tr>
+			</form>
+		</table>
+		<script>
+			// 事件对象:事件处理的第一个参数(event,evt,e)
+			let a = document.querySelector('.smbox');
+			a.addEventListener('mouseover',function(evt){
+				console.log(evt);
+				console.log(evt.type);    //查看事件类型
+				console.log(evt.target);    //实际触发对象
+				evt.stopPropagation();    //阻止事件传播，阻止冒泡
+				a.style.background='green';
+			},false);
+			let b = document.querySelector('.box');
+			b.addEventListener('mouseout',function(evt){
+				evt.stopPropagation();
+				b.style.background='red';
+			},false);
+			
+		</script>
+	</body>
+</html>

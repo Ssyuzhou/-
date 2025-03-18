@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM对象</title>
+</head>
+<body>
+    <h1>s-</h1>
+    <p>哈哈</p>
+    <p>oo</p>
+    <a href="#">嗯</a>
+    <br>
+    <span>哦</span>
+    <div id="cjs">
+        <p class="yf">呃呃呃呃呃</p>
+    </div>
+    <script>
+        //let变量  const常量
+        //querySelector()获取元素第一个元素，选择器
+        let a = document.querySelector('div');
+        console.log(a);
+        a.style.color = 'blue';
+        let b = document.querySelector('#cjs');
+        console.log(b);
+        let c = document.querySelector('.yf');
+        console.log(c);
+        let d = document.querySelectorAll('p');//节点列表
+        console.log(d);
+        let e = document.querySelector('div p');
+        console.log(e);
+        e.style.color = 'red';
+        //像遍历数组一样遍历的d.,for(){}
+        //通过遍历伪数组d，能获得指定位置的元素
+        for(let i=0; i<d.length; i++){
+            console.log(d[i]);
+        }
+        d[0].innerHTML = 'cjs';
+    </script>
+    <script>
+
+    </script>
+</body>
+</html>

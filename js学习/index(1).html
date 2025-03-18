@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+         //创建数组，取出数字用索引，0开始
+         let arr = [23,24,12,45,34];
+        console.log(arr[2]);
+        //打印结果是12
+         let shu = ['tom',12.3,,];
+        console.log(shu[2]);
+        //可定义不同数据类型
+        shu[2] = null;
+        console.log(shu[2]);
+
+        console.log(arr);
+        //打印结果，对象0-23，1-24等
+
+        console.log(arr.length);
+        //获取数组长度
+        for(let i=0;i<arr.length;i++){
+            console.log(arr[i]);
+        }
+    </script>
+    <script>
+       
+        
+        //找出数组score中最大值，并算1数组平均值
+        let score = [89,67,78,80,98,90,70.8,10,35];
+        let max = score[0];
+        for(let a=0;a<score.length;a++){
+            if(score[a]>max){
+                max = score[a];
+                console.log('最大值是：'+max);
+            }
+        }
+        let sum=0;
+        for(let b=0;b<score.length;b++){
+            sum = score[b]+sum;
+        }
+        console.log('平均数是：'+sum/score.length);
+        score[100] = 10;
+        console.log(score[100]);
+        console.log(score.length);//长度是最大索引+1，中间没定义全是undifine
+
+        delete score[100];//删除数组
+        console.log(score[100]);//只是值被删除，但定义任占位，为undifine
+
+        //在数组中定义新数组
+        let old = [2,7,67,98,89,89,77,988,76,56,34];
+        let newArr = [];
+        for(let c=0;c<old.length;c++){
+            if(old[c]<=80){
+                newArr[newArr.length] = old[c];
+            }
+        }
+        console.log(newArr);
+
+    </script>
+    <SCript>
+         //冒泡排序，大-小排序
+         let sj = [2,4,5,7,8,3,1,9,6];
+         let temp;//暂存值
+         for(let j=0;j<sj.length;j++){  // 数组中所以数字
+            for(let k=0;k<sj.length-j;k++){  //作比较的数值（多个递推
+                if(sj[k]>sj[k+1]){
+                    temp = sj[k];
+                    sj[k] = sj[k+1];
+                    sj[k+1] = temp;
+                }
+            }
+         }
+         console.log(sj);
+    </SCript>
+    <script>
+        //插入排序  小-大排序（与冒泡排序区别：取一个数值，用剩下的无序数组与之对比，可插入两数之间
+        let sj2 = [2,5,4,3,1,6,9,8,7];
+        let temp2;
+        for(let n=1;n<sj2.length;n++){ //n=0单独出来作比较，从一开始
+            for(let m=n;m>0;m--){
+                if(sj2[m]>sj2[m-1]){
+                    temp2 = sj2[m];
+                    sj2[m]=sj2[m-1];
+                    sj2[m-1] = temp2;
+                }
+            }
+        }
+        console.log(sj2);
+    </script>
+</body>
+</html>

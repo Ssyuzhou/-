@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<link rel="stylesheet" href="//at.alicdn.com/t/c/font_4541549_gcewjp4fb4.css" /><!-- 三小点 -->
+	<style>
+		*{
+			padding: 0;
+			margin: 0;
+			box-sizing:border-box;
+		}
+		
+		.box{
+			width: 1800px;
+			height: 900px;
+			margin: auto;
+			padding-top: 20px;
+		}
+		#conmment{
+			border: 1px solid gainsboro;
+			width: 800px;
+			height: 300px;
+			margin: auto;
+			padding: 20px 20px;
+			overflow: scroll;
+			
+		}
+		.conmment_box{
+			width: 800px;
+			height: 100px;
+			margin: auto;
+			padding-top: 20px
+		}
+		#conmment_text{
+			padding: 5px 0 5px 5px;
+			float: left;
+		}
+		#btn{
+			width: 100px;
+			height: 30px;
+			float: right;
+		}
+		p{
+			background-color: #edf2fa;
+			border-radius: 10px;
+			height: 30px;
+			padding: 3px 0  0 5px;
+			color: gray;
+			margin-bottom: 10px;
+		}
+		h2{
+			margin-bottom: 20px;
+		}
+	</style>
+	<body>
+		<div class="box">
+			<div id="conmment">
+				<h2>评论区</h2>
+				
+			</div>
+			<div class="conmment_box">
+				<textarea name="" id="conmment_text" cols="92" rows="1" placeholder="请输入评论"></textarea>
+				<button id="btn">发送</button>
+			</div>
+			<hr />
+		</div>
+		<script>
+			//获取事件源点击按钮
+			let a = document.querySelector('#btn');
+			//获取用户发表的评论框
+			let conmmenttext = document.querySelector('#conmment_text');
+			//获取用户评论内容
+			let textvalue = conmmenttext.value;
+			//获取评论池
+			let conmmentbox = document.querySelector('#conmment');
+			//事件类型和事件处理程序
+			a.addEventListener('click',function(event){
+				event.stopPropagation();
+				let textvalue = conmmenttext.value;
+				//创建一个文本节点存放用户文字
+				//创建一个ptext，p标签里放文本节点
+				let ptext = document.createElement('p');
+				//添加节点，ptext为父节点，text存放在ptext，每天加一个放在父节点所有子节点尾巴
+				ptext.textContent = textvalue;
+				//将ptext放入conmment盒子里，每天加一个放在父节点所有子节点尾巴
+				conmmentbox.appendChild(ptext);
+				conmmenttext.value = '';
+				ptext.addEventListener('dblclick',function(event){
+					event.stopPropagation();
+					conmmentbox.removeChild(ptext);
+				})
+				
+			});
+			
+		</script>
+	</body>
+</html>

@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<style>
+			*{
+				padding: 0;
+				margin: 0;
+				box-sizing: border-box;
+			}
+			.bigbox{
+				width: 1900px;
+				height: 950px;
+				background-color: #e0e0e0;
+				margin: auto;
+				position: relative;
+				
+			}
+			.goodsList{
+				width: 380px;
+				height: 920px;
+				background-color: #fff;
+				position: absolute;
+				left: 0px;
+				margin: 10px;
+				border-radius: 10px;
+				overflow: scroll;
+				scrollbar-width: none;
+			}
+			.goodsList>ul>li{
+				width: 360px;
+				height: 100px;
+				padding-top: 25px;
+				background-color: rgba(0, 0, 0, 0.1);
+				margin: 10px;
+				border-radius: 10px;
+				text-align: center;
+				font-size: 30px;
+				font-weight: bolder;
+				color: grey;
+			}
+			.goodsList>ul>li:hover{
+				color: rgba(0, 0, 0, 0.8);
+				background-color: rgba(0, 0, 0, 0.15);
+			}
+			.goodsbox{
+				width: 1480px;
+				height: 920px;
+				overflow: scroll;
+				position: absolute;
+				right: 10px;
+				background-color: #e0e0e0;
+				scrollbar-width: none;
+			}
+			.sonbox{
+				padding: 40px;
+				background-color: white;
+				height: 180px;
+				margin-bottom: 10px;
+				border-radius: 10px;
+				position: relative;
+			}
+			.sonbox img{
+				border-radius:8px;
+				float: left;
+			}
+			.sonbox h3{
+				display: inline-block;
+				padding-left: 20px;
+				margin-bottom: 10px;
+			}
+			.sonbox a{
+				font-size: 14px;
+				color: gray;
+				padding-left: 20px;
+			}
+			.danjia{
+				color: orangered;
+			}
+			.sonbox span{
+				color: orangered;
+				font-weight: bold;
+				padding: 0 0 0 20px;
+			}
+			.join{
+				width: 18px;
+				height: 18px;
+				font-size: 15px;
+				font-weight: bolder;
+				border-radius: 10px;
+				border: none;
+				background-color: orangered;
+				color: white;
+				float: right;
+				margin-right: 20px;
+			}
+			.num_money{
+				position: absolute;
+				font-size: 18px;
+				display: none;
+				right: 103px;
+				color: black;
+			}
+			.reduce{
+				width: 18px;
+				height: 18px;
+				font-size: 18px;
+				border-radius: 10px;
+				border: none;
+				background-color: orangered;
+				color: white;
+				position: absolute;
+				right: 130px;
+				display: none;
+				
+			}
+			@keyframes movebollson{
+				to{
+					transform: translateX(-425px);
+				}
+			}
+			@keyframes moveboll{
+				to{
+					transform: translateY(760px);
+				}
+			} */
+			.moveson{
+				width:18px;
+				height:18px;
+				display: inline-block;
+				border-radius: 50px;
+				background-color: pink;
+				animation: movebollson 0.5s ease ;
+				animation-iteration-count: 0;
+			}
+			
+			.moving{
+				width: 18px;
+				height: 18px;
+				font-size: 15px;
+				font-weight: bolder;
+				border-radius: 10px;
+				border: 2px solid black;
+				background-color: transparent;
+				float: right;
+				margin-right: 1px;
+				display: none;
+				border: none;
+				position: absolute;
+				right: 60px;
+				top: 80px;
+				animation: moveboll 0.3s linear ;
+				animation-iteration-count: 0;
+			}
+			
+			.foot{
+				width: 420px;
+				height: 50px;
+				background-color: rgba(0, 0, 0, 0.8);
+				position: absolute;
+				bottom: 25px;
+				right: 80px;
+				border-radius: 30px;
+				
+			}
+			.foot span{
+				width: 240px;height: 20px;
+				display: inline-block;
+				text-align: right;
+				margin-top: 20px;
+				color: orangered;
+				font-size: 12px;
+				font-weight: bolder;
+				position: relative;
+			}
+			.tomoney{
+				width: 100px;
+				height: 50px;
+				border: none;
+				background-color: orangered;
+				color: white;
+				font-weight: bold;
+				float: right;
+				border-bottom-right-radius: 50px;
+				border-top-right-radius: 50px;
+			}
+			.num{
+				width: 20px;
+				height: 20px;
+				background-color: orangered;
+				color: white;
+				font-weight: bold;
+				border-radius: 50%;
+				border: none;
+				position: absolute;
+				left: 0;
+				top: 0;
+				display: none;
+			}
+			.totalmum{
+				display: none;
+				position: absolute;
+				right: -70px;
+				top: -10px;
+				color: orangered; 
+				font-size: 26px; 
+				font-weight: bold; 
+				text-decoration: none;
+			}
+			
+		</style>
+	</head>
+	<body>
+		<div class="bigbox">
+			<!-- <div class="goodsList">
+				<ul>
+					<li>肯德基</li>
+					<li>麦当劳</li>
+					<li>蜜雪冰城</li>
+					<li>益禾堂</li>
+					<li>喜茶</li>
+					<li>瑞幸</li>
+					<li>幸运咖</li>
+					<li>茶百道</li>
+					<li>古茗</li>
+					<li>书亦烧仙草</li>
+				</ul>
+			</div> -->
+			<!-- <script>
+				let goodsList = document.querySelector('.goodsList');
+				goodsList.addEventListener('click',function(event){
+					let e = event.target;
+					if(e.tagName === 'LI'){
+						e.style.color = 'black';
+					}
+				});
+			</script> -->
+			<div class="goodsbox">
+				<h1 style="font-size: 60px;">肯德基</h1>
+				<div class="sonbox">
+					<img src="https://ts1.cn.mm.bing.net/th?id=OIP-C.uWiaKyrmQO5ACthO7j66KgHaE2&w=308&h=202&c=8&rs=1&qlt=90&o=6&pid=3.1&rm=2" alt="图片" / width="100px" height="100px">
+					<h3>肯德基</h3>
+					<br />
+					<a>这里是商品链接，这里是商品链接</a>
+					<br />
+					<span>￥</span>
+					<strong href="#" class="danjia">50</strong>
+					<button class="reduce">-</button>
+					<span class="num_money">0</span>
+					<button class="join">+</button>
+					<button class="moving"><span class="moveson" style="padding: 0;">+</span></button>
+				</div>
+				<div class="sonbox">
+					<img src="https://ts1.cn.mm.bing.net/th?id=OIP-C.uWiaKyrmQO5ACthO7j66KgHaE2&w=308&h=202&c=8&rs=1&qlt=90&o=6&pid=3.1&rm=2" alt="图片" / width="100px" height="100px">
+					<h3>肯德基</h3>
+					<br />
+					<a>这里是商品链接，这里是商品链接</a>
+					<br />
+					<span>￥</span>
+					<strong href="#" class="danjia">90</strong>
+					<button class="reduce">-</button>
+					<span class="num_money">0</span>
+					<button class="join">+</button>
+					<button class="moving"><span class="moveson" style="padding: 0;">+</span></button>
+				</div>
+				<div class="sonbox">
+					<img src="https://ts1.cn.mm.bing.net/th?id=OIP-C.uWiaKyrmQO5ACthO7j66KgHaE2&w=308&h=202&c=8&rs=1&qlt=90&o=6&pid=3.1&rm=2" alt="图片" / width="100px" height="100px">
+					<h3>肯德基</h3>
+					<br />
+					<a>这里是商品链接，这里是商品链接</a>
+					<br />
+					<span>￥</span>
+					<strong href="#" class="danjia">60</strong>
+					<button class="reduce">-</button>
+					<span class="num_money">0</span>
+					<button class="join">+</button>
+					<button class="moving"><span class="moveson" style="padding: 0;">+</span></button>
+				</div>
+				<div class="sonbox">
+					<img src="https://ts1.cn.mm.bing.net/th?id=OIP-C.uWiaKyrmQO5ACthO7j66KgHaE2&w=308&h=202&c=8&rs=1&qlt=90&o=6&pid=3.1&rm=2" alt="图片" / width="100px" height="100px">
+					<h3>肯德基</h3>
+					<br />
+					<a>这里是商品链接，这里是商品链接</a>
+					<br />
+					<span>￥</span>
+					<strong href="#" class="danjia">20</strong>
+					<button class="reduce">-</button>
+					<span class="num_money">0</span>
+					<button class="join">+</button>
+					<button class="moving"><span class="moveson" style="padding: 0;">+</span></button>
+				</div>
+				<div class="sonbox">
+					<img src="https://ts1.cn.mm.bing.net/th?id=OIP-C.uWiaKyrmQO5ACthO7j66KgHaE2&w=308&h=202&c=8&rs=1&qlt=90&o=6&pid=3.1&rm=2" alt="图片" / width="100px" height="100px">
+					<h3>肯德基</h3>
+					<br />
+					<a>这里是商品链接，这里是商品链接</a>
+					<br />
+					<span>￥</span>
+					<strong href="#" class="danjia">30</strong>
+					<button class="reduce">-</button>
+					<span class="num_money">0</span>
+					<button class="join">+</button>
+					<button class="moving"><span class="moveson" style="padding: 0;">+</span></button>
+				</div>
+				<div class="sonbox">
+					<img src="https://ts1.cn.mm.bing.net/th?id=OIP-C.uWiaKyrmQO5ACthO7j66KgHaE2&w=308&h=202&c=8&rs=1&qlt=90&o=6&pid=3.1&rm=2" alt="图片" / width="100px" height="100px">
+					<h3>肯德基</h3>
+					<br />
+					<a>这里是商品链接，这里是商品链接</a>
+					<br />
+					<span>￥</span>
+					<strong href="#" class="danjia">10</strong>
+					<button class="reduce">-</button>
+					<span class="num_money">0</span>
+					<button class="join">+</button>
+					<button class="moving"><span class="moveson" style="padding: 0;">+</span></button>
+				</div>
+			</div>
+			<div class="foot">
+				<button class="num"></button>
+				<span>总计:<a href="#" class="totalmum"></a></span>
+				<button class="tomoney">去结算</button>
+			</div>
+		</div>
+		<script>
+			//获取每个单品总的父元素进行target(事件委托)：冒泡事件父元素事件由子元素继承
+			let goodsbox = document.querySelector('.goodsbox');
+			let sonbox = document.querySelector('.sonbox');
+			//商品加号
+			let take = document.querySelector('.join');
+			//商品减号
+			let reduce = document.querySelector('.reduce');
+			//总价
+			let total_money = document.querySelector('.totalmum');
+			//商品单价
+			let danjia = document.querySelector('.danjia');
+			//计算购买数量容器
+			let total = document.querySelector('.num');
+			//点击加号的点击事件
+			
+			// console.log(take.previousElementSibling.previousElementSibling);
+			let jieguo = 0;
+			
+			goodsbox.addEventListener('click',function(event){
+				//事件委托goodsbox下冒泡的子元素
+				let target = event.target;
+				if(target.className == 'join'){
+					total_money.style.display = 'inline-block';
+					//显示购买数量容器
+					total.style.display = 'inline-block';
+					//显示加号哥哥的哥哥——减号
+					target.previousElementSibling.previousElementSibling.style.display = 'inline-block';
+					//显示加号哥哥——文字
+					target.previousElementSibling.style.display = 'inline-block';
+					
+					//数量*2根据点击次数依次递加
+					total.innerHTML++;
+					//定义加减中间个数
+					let danjia_num = target.previousElementSibling.innerHTML++;
+					danjia_num++;
+					console.log(danjia_num);
+					//计算总价单价*个数相加
+					//获取单价
+					let danjia = target.previousElementSibling.previousElementSibling.previousElementSibling;
+					console.log(parseInt(danjia.textContent));
+					jieguo = jieguo + parseInt(danjia.textContent);                                                                     
+					total_money.textContent = jieguo;
+				}
+				//全局获取商品总计
+				let reduce_jieguo = total_money.textContent;
+				//点击减号的事件处理
+				console.log(reduce_jieguo);
+				if(target.className == 'reduce'){
+					//单价数量，总数量递减
+					let danjia_num_reduce = target.nextElementSibling.innerHTML--;
+					danjia_num_reduce--;
+					total.innerHTML--;
+					console.log(danjia_num_reduce);
+					//定义单价
+					let reduce_danjia = target.previousElementSibling;
+					//计算减法结果
+					reduce_jieguo = reduce_jieguo - parseInt(reduce_danjia.textContent);
+					total_money.textContent = reduce_jieguo;
+					//商品数量为0，商品数量和减号消失
+					if(danjia_num_reduce == 0){
+						target.style.display = 'none';
+						target.nextElementSibling.style.display = 'none';
+					}
+					//商品总量为0，商品总数和总价消失
+					if(total == 0){
+						total.style.display = 'none';
+						total_money.style.display = 'none';
+					}
+					
+				}
+				
+			});
+			
+			
+		</script>
+	</body>
+</html>
