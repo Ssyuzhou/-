@@ -1,0 +1,274 @@
+*{
+	padding: 0;
+	margin: 0;
+	text-decoration: none;
+	box-sizing: border-box;
+}
+body{
+	
+}
+.box{
+	width: 1900px;
+	height: 870px;
+	margin: auto;
+	
+}
+
+
+
+.home_page{
+	width: 2400px;
+	height: 230px;
+
+}
+.imgbox{
+	width: 280px;
+	height: 200px;
+	float: left;
+	margin-left: 20px;
+	margin-top: 20px;
+	border: 2px solid gainsboro;
+	padding-top: 60px;
+	padding-left: 10px;
+	padding-right: 10px;
+	overflow: hidden;
+}
+.imgbox:hover{
+	transition-delay: 0.1s;
+	transition-duration: 0.5s;
+	box-shadow: 0px 4px 8px 0px rgba( 0, 0, 0, 0.1),0px 6px 20px 0px rgba( 0, 0, 0, 0.1);
+}
+#pc1{
+	background-image: url('https://ynkim.com/wp/wp-content/uploads/2024/01/00_v01-3.jpg');
+	background-repeat: no-repeat;
+	background-size: 280px 200px;
+}
+#pc2{
+	background-image: url('https://ynkim.com/wp/wp-content/uploads/2023/05/Framing-Spaces-Exhibition-5.jpg');
+	background-repeat: no-repeat;
+	background-size: 280px 200px;
+}
+#pc3{
+	background-image: url('https://ynkim.com/wp/wp-content/uploads/2020/08/BB_installation-view_11.jpg');
+	background-repeat: no-repeat;
+	background-size: 280px 200px;
+}
+#pc1:hover #pc1_content{
+	display: block;
+	animation: lettop 0.4s linear 1;
+}
+#pc2:hover #pc2_content{
+	display: block;
+}
+#pc3:hover #pc3_content{
+	display: block;
+}
+#pc1_content{
+	display: none;
+}
+#pc2_content{
+	display: none;
+	animation: lettop 0.4s linear 1;
+}
+#pc3_content{
+	display: none;
+	animation: lettop 0.4s linear 1;
+}
+@keyframes lettop{
+	from{
+		transform: translateY(260px);
+	}
+	to{
+		transform: translateY(0);
+	}
+}
+.works h1{
+	font-size: 30px;
+	text-align: center;
+	
+}
+.works_var{
+	width: 1900px;
+	height: 600px;
+	overflow: hidden;
+	background-color: aliceblue;
+}
+.work{
+	width: 100%;
+	height: 300px;
+}
+.workleft{
+	width: 370px;
+	height: 300px;
+	padding: 70px 0 0 50px;
+	display: inline-block;
+	overflow: hidden;
+}
+@keyframes bigger{
+	from{
+		transform: scale(1);
+	}
+	to{
+		transform: scale(1.5);
+		box-shadow: 0px 4px 8px 0px rgba( 0, 0, 0, 0.1),0px 6px 20px 0px rgba( 0, 0, 0, 0.4);
+		border-radius: 5px;
+	}
+}
+.workleft img{
+	animation: bigger 3s linear infinite;
+}
+.work_right img{
+	animation: bigger 3s linear infinite;
+	
+}
+.workleft img{
+	width: 280px;
+	height: 200px;
+	box-shadow: 0px 4px 8px 0px rgba( 0, 0, 0, 0.1),0px 6px 20px 0px rgba( 0, 0, 0, 0.4);
+	border-radius: 5px;
+}
+.work_right img{
+	width: 260px;
+	height: 200px;
+	box-shadow: 0px 4px 8px 0px rgba( 0, 0, 0, 0.1),0px 6px 20px 0px rgba( 0, 0, 0, 0.4);
+	border-radius: 5px;
+}
+.workright{
+	display: inline-block;
+	width: 500px;
+	height: 300px;
+	overflow: hidden;
+	text-align: left;
+	padding: 70px 0;
+}
+.workright a{
+	color: black;
+}
+.work_left{
+	display: inline-block;
+	width: 580px;
+	height: 300px;
+	text-align: right;
+	padding: 70px 0;
+	overflow: hidden;
+}
+.work_left a{
+		color: black;
+}
+.work_right{
+	display: inline-block;
+	width: 320px;
+	height: 300px;
+	overflow: hidden;
+	padding: 70px 0 0 50px;
+	float: right;
+}
+
+.work_var_left{
+	width: 900px;
+	height: 800px;
+	background-color: ;
+	float: left;
+}
+.work_var_right{
+	width: 900px;
+	height: 800px;
+	background-color: ;
+	float: right;
+}
+.foot{
+	text-align: right;
+}
+h3{
+	padding: 5px 5px;
+}
+.fo_box{
+	display: inline-block;
+	width: 40px;
+	height: 30px;
+	background-color: aqua;
+}
+/* .fall_img{
+	position: relative;
+	float: left;
+	width: 700px;
+}
+.fall_img_right{
+	position: relative;
+	float: right;
+	width: 400px;
+}
+.fall_img1{
+	width: 200px;
+	height: 160px;
+	position: absolute;
+	top: 0;
+	left: 100px;
+	animation: fallimg 10s linear 0s infinite;
+}
+.fall_img2{
+	width: 200px;
+	height: 160px;
+	position: absolute;
+	left: 100px;
+	
+	animation: fallimg 10s linear 2s infinite;
+
+}
+.fall_img3{
+	width: 200px;
+	height: 160px;
+	position: absolute;
+	left: 100px;
+	
+	animation: fallimg 10s linear 4s infinite;
+}
+.fall_img4{
+	width: 200px;
+	height: 160px;
+	position: absolute;
+	left: 100px;
+	
+	animation: fallimg 10s linear 6s infinite;
+}
+.fall_img5{
+	width: 200px;
+	height: 160px;
+	position: absolute;
+	left: 100px;
+	
+	animation: fallimg 10s linear 8s infinite;
+}
+.fall_img6{
+	width: 200px;
+	height: 160px;
+	position: absolute;
+	left: 100px;
+	
+	animation: fallimg 10s linear 10s infinite;
+}
+ 
+ @keyframes fallimg{
+	0%{
+		top: -100px;
+		opacity: 0.8;
+		transform: scale(1);
+	
+	}
+	25%{
+		transform: scale(2);
+	}
+	50%{
+		top: 1000px;
+		opacity: 1;
+		transform: scale(1);
+	}
+	75%{
+		transform: scale(2);
+	}
+	100%{
+		top: 2000px;
+		opacity: 0.8;
+		transform: scale(1);
+	}
+} */

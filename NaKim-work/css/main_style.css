@@ -1,0 +1,391 @@
+.main_bgimg{
+	width: 1800px;
+	height: 940px;
+	background-image: url('../img/pc1_NaKim.png');
+	background-repeat: no-repeat;
+	background-size: 1800px 940px;
+	margin: auto;
+	position: relative;
+	overflow: hidden;
+}
+.topleft h1{
+	font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+	font-size: 50px;
+	display: inline-block;
+	color: white;
+}
+
+.topleft{
+	float: left;
+	position: absolute;
+	left: 40px;
+	top: -10px;
+	display: inline-block;
+	width: 200px;
+	height: 100px;
+}
+.topright{
+	padding-top: 20px;
+	width: 420px;
+	height: 100px;
+	float: right;
+	position: absolute;
+	right: 40px;
+}
+.topright a{
+	font-size: 35px;
+	margin-right: 20px;
+	color: white;
+}
+.topright a:hover{
+	color: yellow;
+	text-decoration: underline;
+}
+strong{
+	color: white;
+	font-size: 35px;
+	margin-right: 20px;
+}
+html{
+	width: 1900px;
+}
+.yuan{
+	width: 0;
+	height: 0;
+	border-radius: 50%;
+	position: absolute;
+	top: 270px;
+	left: 400px;
+	background-color: #b00e0c;
+	animation: bigger 1s linear 4s infinite;
+}
+.yuanl{
+	width: 0;
+	width: 0;
+	border-radius: 50%;
+	position: absolute;
+	top: 360px;
+	right: 370px;
+	background-color: #173928;
+	animation: bigger 1s linear 4s infinite;
+} 
+@keyframes bigger{
+	0%{
+		width: 180px;
+		height: 180px;
+		transform: scale(1);
+	}
+	50%{
+		width: 180px;
+		height: 180px;
+		transform: scale(1.2);
+	}
+	100%{
+		width: 180px;
+		height: 180px;
+		transform: scale(1);
+	}
+}
+.hang1{
+	width: 25px;
+	height: 60px;
+	background-color: rgb(225, 225, 225, 0.5);
+	position: absolute;
+	left: 300px;
+	top: 25px;
+	border-radius: 40%;
+	animation: cc 1s linear infinite;
+}
+.hang2{
+	width: 25px;
+	height: 80px;
+	background-color: rgb(225, 225, 225, 0.5);
+	position: absolute;
+	left: 350px;
+	top: 15px;
+	border-radius: 40%;
+	animation: hh 1s linear infinite;
+}
+.hang3{
+	width: 25px;
+	height: 60px;
+	background-color: rgb(225, 225, 225, 0.5);
+	position: absolute;
+	left: 400px;
+	top: 25px;
+	border-radius: 40%;
+	animation: cc 1s linear infinite;
+}
+.hang4{
+	width: 25px;
+	height: 80px;
+	background-color: rgb(225, 225, 225, 0.5);
+	position: absolute;
+	left: 450px;
+	top: 15px;
+	border-radius: 40%;
+	animation: hh 1s linear infinite;
+}
+.hang5{
+	width: 25px;
+	height: 60px;
+	background-color: rgb(225, 225, 225, 0.5);
+	position: absolute;
+	left: 500px;
+	top: 25px;
+	border-radius: 40%;
+	animation: cc 1s linear infinite;
+}
+.hang6{
+	width: 25px;
+	height: 80px;
+	background-color: rgb(225, 225, 225, 0.5);
+	position: absolute;
+	left: 550px;
+	top: 15px;
+	border-radius: 40%;
+	animation: hh 1s linear infinite;
+}
+
+.hang7{
+	width: 25px;
+	height: 60px;
+	background-color: rgb(225, 225, 225, 0.5);
+	position: absolute;
+	left: 600px;
+	top: 25px;
+	border-radius: 40%;
+	animation: cc 1s linear infinite;
+}
+.hang8{
+	width: 25px;
+	height: 80px;
+	background-color: rgb(225, 225, 225, 0.5);
+	position: absolute;
+	left: 650px;
+	top: 15px;
+	border-radius: 40%;
+	animation: hh 1s linear infinite;
+}
+@keyframes hh{
+	0%{
+		transform: scaleY(0.5);
+	}
+	50%{
+		transform: scaleY(1);
+	}
+	100%{
+		transform: scaleY(0.5);
+	}
+}
+@keyframes cc{
+	0%{
+		transform: scaleY(1.2);
+	}
+	50%{
+		transform: scaleY(0.8);
+	}
+	100%{
+		transform: scaleY(1.2);
+	}
+}
+.text_name_day{
+	animation: tranle_ri 2s linear 1;
+	width: 430px;
+	height: 270px;
+	position: absolute;
+	right: 0;
+	bottom: 0;
+}
+@keyframes tranle_ri{
+	0%{
+		
+		opacity: 0;
+		right: -300px;
+	}
+	50%{
+		opacity: 0.5;
+	}
+	100%{
+		opacity: 1;
+		
+	}
+}
+.text_name_day p{
+	font-size: 45px;
+	font-weight: bolder;
+	margin: 15px 0;
+	text-align: right;
+	padding-right: 60px;
+}
+.linebox1 .line{
+	width: 550px;
+	height: 15px;
+	background-color: #102962;
+	margin-bottom: 20px;
+}
+.linebox1{
+	position: absolute;
+	left: 0;
+	bottom: 20px;
+	animation: line 2s linear 1;
+	
+}
+@keyframes line{
+	0%{
+		opacity: 0;
+		left: -500px;
+	}
+	50%{
+		opacity: 0.5;
+	}
+	100%{
+		opacity: 1;
+		
+	}
+}
+.linebox2{
+	position: absolute;
+	right: 20px;
+	top: 0;
+	
+	animation: line2 2s linear 1;
+}
+.linebox2 .line{
+	width: 15px;
+	height: 400px;
+	background-color: #102962;
+	display: inline-block;
+	margin-left: 15px;
+}
+@keyframes line2{
+	0%{
+		opacity: 0;
+		top: -400px;
+	}
+	50%{
+		opacity: 0.5;
+	}
+	100%{
+		opacity: 1;
+		
+	}
+}
+.redboll{
+	width: 0px;
+	height: 0px;
+	position: absolute;
+	top: 270px;
+	background-color: #b00e0c;
+	border-radius: 50%;
+	animation: o1 0.5s linear 2.6s 1 forwards;
+}
+
+@keyframes o1{
+	0%{
+		width: 180px;
+		height: 180px;
+		opacity: 0;
+		transform: translate(0,0);
+	}
+	100%{
+		width: 180px;
+		height: 180px;
+		opacity: 1;
+		transform: translate(400px,0px);
+		
+		
+	}
+}
+.blueboll{
+	width: 0px;
+	height: 0px;
+	position: absolute;
+	top: 60px;
+	right: 370px;
+	background-color: #173928;
+	border-radius: 50%;
+	animation: o2 0.5s linear 2.6s 1 forwards;
+}
+@keyframes o2{
+	0%{
+		width: 180px;
+		height: 180px;
+		opacity: 0;
+		transform: translate(0,0);
+		transform: rotate(270deg);
+	}
+	100%{
+		width: 180px;
+		height: 180px;
+		opacity: 1;
+		transform: translate(0px,300px);
+		
+	}
+}
+.name1{
+	width: 0;
+	height: 0;
+	font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+	font-size: 160px;
+	display: inline-block;
+	color: black;
+	font-weight: bolder;
+	position: absolute;
+	top: 0;
+	left: 0;
+	animation: n1 0.2s linear 3.5s 1 forwards;
+	overflow: hidden;
+}
+.name2{
+	width: 0;
+	height: 0;
+	font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+	font-size: 160px;
+	display: inline-block;
+	font-weight: bolder;
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	color: black;
+	animation: n2 0.2s linear 3.5s 1 forwards;
+}
+@keyframes n1{
+	0%{
+		width: 180px;
+		height: 180px;
+		opacity: 0;
+		transform: translate(0,0);
+	}
+	100%{
+		width: 180px;
+		height: 180px;
+		opacity: 1;
+		transform: translate(600px,300px);
+	}
+}
+@keyframes n2{
+	0%{
+		width: 180px;
+		height: 180px;
+		opacity: 0;
+		transform: translate(0,0);
+	}
+	100%{
+		width: 180px;
+		height: 180px;
+		opacity: 1;
+		transform: translate(-830px,-320px);
+		
+		
+	}
+}
+.yellowboll{
+	width: 180px;
+	height: 180px;
+	background-color: #ead102;
+	border-radius: 50%;
+	position: absolute;
+	left: 460px;
+	top: 680px;
+}
